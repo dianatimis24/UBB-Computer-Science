@@ -1,0 +1,34 @@
+Interpolation Search:
+	Time Complexity:
+	- best case: we find the element we are looking for in just 1 probe
+	  O(1)
+	- average case: the elements of the list are drawn independently from a uniform distribution
+	  O(log(log(n))
+	- worst case: the algorithm makes n comparisons and this happens when the numerical values of the
+	elements of the list increase exponentially or when the searched number is not in the list
+	  O(n)
+	Space Complexity: O(1), because we only need to store indices for the search in the list
+
+Exchange Sort:
+	Time Complexity:
+	- best case: the list is already sorted, but the algorithm will perform unnecessary iterations
+	due to the fact that both of the for loops go on to the end
+	  O(n^2)
+	- average case: the elements of the list are placed in a random order
+	  O(n^2)
+	- worst case: the list is already sorted, but in reverse order
+	  O(n^2)
+	Space Complexity: O(1), because the algorithm does not use any variable sized data structures
+	or buffer nor make use of any recursive call
+
+Comb Sort:
+	Time Complexity:
+	- best case: the list is already sorted, but the algorithm will perform unnecessary iterations
+	due to the fact that the while loop continues until the gap is 1
+	  O(n*log(n))
+	- average case: the elements of the list are placed in a random order
+	  O(n^2/2^p)
+	- worst case: the list is already sorted or nearly sorted, but in reverse order
+	  O(n^2)
+	Space Complexity: O(1), because the algorithm does not use any variable sized data structures
+	or buffer nor make use of any recursive call
