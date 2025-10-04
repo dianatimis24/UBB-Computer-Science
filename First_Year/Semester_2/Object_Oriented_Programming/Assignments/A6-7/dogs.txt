@@ -1,0 +1,15 @@
+Max | Bulldog | 5 | https://media.hornbach.ro/cmsm/ro/chke2-60/acd0c2935c3d7c8ed5cba14d76b1b0/bulldog-francez-1200x800.jpg
+Bruno | Malamute | 4 | https://rasedecaini.ro/wp-content/uploads/2020/05/rasa-caini-malamut-de-alaska-730x426.png
+Dora | Rottweiler | 12 | https://petmaster.ro/modules//smartblog/images/71-single-default.jpg
+Ruth | Teckel | 2 | https://www.megapet.ro/continut/upload/articole/cainii-din-rasa-teckel-megapet.jpg
+Rex | Bulldog | 2 | https://dogtime.com/wp-content/uploads/sites/12/2011/01/GettyImages-168620477-e1691273341205.jpg?w=1024
+Simina | Teckel | 1 | https://static.fera.ro/images/blog/57/jamnik.jpg?t=1613224363
+Rufus | Malamute | 3 | https://static.fera.ro/images/blog/90/doros%C5%82y_alaskan_malamute.jpg?t=1617092691
+Toto | Labrador | 7 | https://cdn.britannica.com/32/257732-050-6D612B6D/Labrador-retriever-dog-surfing-Huntington-Beach-California.jpg
+Nora | Malamute | 21 | https://static.fera.ro/images/blog/90/doros%C5%82y_alaskan_malamute.jpg?t=1617092691
+Mina | Labrador | 1 | https://cdn.britannica.com/82/232782-050-8062ACFA/Black-labrador-retriever-dog.jpg
+Lily | Teckel | 5 | https://cdn.britannica.com/15/234215-050-140D3D84/Wirehaired-dachshund-dog.jpg
+Max | Labrador | 3 | https://cdn.britannica.com/82/232782-050-8062ACFA/Black-labrador-retriever-dog.jpg
+Lara | Rottweiler | 10 | https://cdn.britannica.com/70/234470-050-F25D5205/Rottweiler-dog.jpg
+Toby | Husky | 3 | https://cdn.britannica.com/84/232784-050-1769B477/Siberian-Husky-dog.jpg
+Mira | Labrador | 6 | https://cdn.britannica.com/82/232782-050-8062ACFA/Black-labrador-retriever-dog.jpg

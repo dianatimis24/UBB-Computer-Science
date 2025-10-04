@@ -1,0 +1,6 @@
+Carbonarra|Italian|20|pasta,butter,pepper,ham,
+Bolognese|Italian|25|pasta,ham,tomato,
+Tiramissu|Italian|105|coffee,cream,ladyfingers,
+Taco|Mexican|15|tortilla,ham,salad,
+Sarmale|Romanian|40|cabbage,ham,rice,pepper,
+Papanasi|Romanian|110|cheese,sugar,

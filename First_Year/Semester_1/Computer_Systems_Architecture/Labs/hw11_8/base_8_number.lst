@@ -1,0 +1,42 @@
+     1                                  bits 32                         
+     2                                  segment code use32 public code
+     3                                  global base_8_number
+     4                                  
+     5                                  ; base_8_number(int) : int
+     6                                  ;   - 1 parameter N : integer
+     7                                  ;   - calculates the value of N in base 8 : integer
+     8                                  ;   - return value in EAX : integer
+     9                                  ;   - uses/modifies EAX, EDX, ECX, EBX
+    10                                  ;   - frees stack parameters
+    11                                  base_8_number:
+    12 00000000 8B442404                    mov EAX, [ESP + 4]
+    13 00000004 BB08000000                  mov EBX, 8
+    14 00000009 B900000000                  mov ECX, 0
+    15 0000000E 31D2                        xor EDX, EDX
+    16                                      
+    17                                      digits_of_the_conversion_into_base_8_loop:
+    18 00000010 31D2                            xor EDX, EDX
+    19 00000012 F7F3                            div EBX ; EDX:EAX / 8 -> quotient in EAX, remainder in EDX
+    20                                          
+    21 00000014 52                              push EDX
+    22 00000015 41                              inc ECX
+    23                                  
+    24 00000016 83F800                          cmp EAX, 0
+    25 00000019 75F5                            jne digits_of_the_conversion_into_base_8_loop
+    26                                          
+    27                                      ; now, the digits of the result are on the stack in correct order and their number is contained by ECX 
+    28                                      ; we will obtain the number in EAX
+    29                                      
+    30 0000001B B800000000                  mov EAX, 0
+    31 00000020 E30C                        jecxz final
+    32                                      obtaining_number_in_base_8_loop:
+    33 00000022 BA0A000000                      mov EDX, 10
+    34 00000027 F7E2                            mul EDX ; EDX:EAX = 10 * EAX, but EDX = 0, because the numbers used in our program are not that big
+    35 00000029 5B                              pop EBX ; the last digit from the stack
+    36 0000002A 01D8                            add EAX, EBX 
+    37 0000002C E2F4                            loop obtaining_number_in_base_8_loop
+    38                                      
+    39                                      final:
+    40                                      
+    41                                      ; the conversion into base 8 is in EAX
+    42 0000002E C20400                      ret 4

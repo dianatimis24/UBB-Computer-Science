@@ -1,0 +1,15 @@
+Rex | Bulldog | 2 | https://dogtime.com/wp-content/uploads/sites/12/2011/01/GettyImages-168620477-e1691273341205.jpg?w=1024
+Rufus | Malamute | 3 | https://static.fera.ro/images/blog/90/doros%C5%82y_alaskan_malamute.jpg?t=1617092691
+Toto | Labrador | 5 | https://cdn.britannica.com/32/257732-050-6D612B6D/Labrador-retriever-dog-surfing-Huntington-Beach-California.jpg
+Ruth | Teckel | 2 | https://www.megapet.ro/continut/upload/articole/cainii-din-rasa-teckel-megapet.jpg
+Simina | Teckel | 1 | https://static.fera.ro/images/blog/57/jamnik.jpg?t=1613224363
+Nora | Malamute | 5 | https://static.fera.ro/images/blog/90/doros%C5%82y_alaskan_malamute.jpg?t=1617092691
+Mina | Labrador | 1 | https://cdn.britannica.com/82/232782-050-8062ACFA/Black-labrador-retriever-dog.jpg
+Lily | Teckel | 5 | https://cdn.britannica.com/15/234215-050-140D3D84/Wirehaired-dachshund-dog.jpg
+Max | Labrador | 3 | https://cdn.britannica.com/82/232782-050-8062ACFA/Black-labrador-retriever-dog.jpg
+Lara | Rottweiler | 1 | https://cdn.britannica.com/70/234470-050-F25D5205/Rottweiler-dog.jpg
+Lora | Labrador | 3 | https://cdn.britannica.com/82/232782-050-8062ACFA/Black-labrador-retriever-dog.jpg
+Eora | Labrador | 3 | https://cdn.britannica.com/82/232782-050-8062ACFA/Black-labrador-retriever-dog.jpg
+Mora | Labrador | 3 | https://cdn.britannica.com/82/232782-050-8062ACFA/Black-labrador-retriever-dog.jpg
+Tuta | Husky | 3 | https://cdn.britannica.com/82/232782-050-8062ACFA/Black-labrador-retriever-dog.jpg
+Mara | Labrador | 3 | https://cdn.britannica.com/82/232782-050-8062ACFA/Black-labrador-retriever-dog.jpg

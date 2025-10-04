@@ -1,0 +1,71 @@
+cat testShell.txt
+Ssh sessions log files are given.
+The log file has the following format:
+Start line:
+[%date %time] Session %sid started for user %user. Remote client: %client
+Command line:
+[%date %time] %sid %user %command
+End lines
+[%date %time] Session %sid ended.
+[%date %time] Session %sid closed by user.
+
+Each session must have one Start line, one End line and any number of Command lines.
+
+Write a shell script that filters data from one or more log files matching the description above.
+The script will receive all the input via command line arguments.
+The script must implement the following command line arguments:
+        -s, --session session-id
+           - display all the information (start line, command lines, end line) regarding the given session id (1.5p)
+           - if multiple ids are provided, the lines displayed in the output will be grouped by each session (1p)
+
+        -u, --user username
+           - display all the lines related to the given username (1p)
+           - if multiple users are provided, all the lines related to all the users will be displayed (0.5)
+
+        -c, --client ip-address
+           - display all the lines related to the sessions initialised from the given ip address (1.5p)
+           - if multiple ip-addresses are provided, all the lines related to all the sessions initialised from all the provided ip addresses (1p)
+
+        -d, --date date (day/month/year)
+           - display all activity from the provided date (1p)
+           - if multiple dates are provided, display all the activity from all the provided dates (0.5p)
+
+        -u, --user username
+           - display all the lines related to the given username (1p)
+           - if multiple users are provided, all the lines related to all the users will be displayed (0.5)
+
+        -c, --client ip-address
+           - display all the lines related to the sessions initialized from the provided ip address (1.5p)
+           - if multiple ip-addresses are provided, all the lines related to all the sessions initialized from all the provided ip addresses (1p)
+
+        -d, --date date (day/month/year)
+           - display all activity from the provided date (1p)
+           - if multiple dates are provided, display all the activity from all the provided dates (0.5)
+           - if the date contains the characer '+' or '-' at the end display all activity since/until thae specified date, since if the date ends with a '+' until if the date ends with a '-' (1.5p)
+                example:
+                    * 23/11/2020+ will display all the activity since 23rd of November 2020, included
+                    * 13/12/2019- will display all the activity until 13th of December 2019, included
+NOTES:
+   * for each option you can implement a reverse filter. The reverse filter will be active if the filter criteria starts with the '!' character (0.5p for each)
+          example:
+             if we had:
+               * filter.sh log.file -u !root
+                   - will display all the lines related to all the users except for the root user
+
+   * for the implementation of multiple filters provided these must work by using the same option multiple times or by profinding multiple filters separated by the ',' character
+          example:
+             filter.sh -u root -u apache
+             or
+             filter.sh -u root,apache
+             must have the same behavior
+SCORING:
+   * In order to pass the exam the script must run without any syntax or runtime errors and you must accumulate at least 5 points.
+   * You will not get a score higher than 10 if you score more than 10 points.
+   * The input data must be validade (1p)
+         - make sure the file/files provided exist and you can read them
+         - make sure the provided arguments are implemented
+         - make sure arguments are provided with aparameter
+   * If you implement both the short and long version of the argumets you receive + 0.5p
+
+Use the command # generate.sh X
+in order to generate logs for X sessions.

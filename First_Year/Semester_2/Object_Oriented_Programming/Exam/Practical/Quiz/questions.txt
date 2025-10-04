@@ -1,0 +1,6 @@
+1|Longest river:|Volga|10
+24|Most populated country:|India|15
+3|Smallest country:|Vatican|13
+2|Largest country:|Russia|12
+4|Least populated country:|Vatican|14
+6|Current country:|Romania|10
