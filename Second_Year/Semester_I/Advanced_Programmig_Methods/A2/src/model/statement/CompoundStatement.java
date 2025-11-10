@@ -1,0 +1,33 @@
+package model.statement;
+
+import model.ADTs.stack.IStack;
+import model.ADTs.stack.MyStack;
+import model.state.ProgramState;
+
+public class CompoundStatement implements IStatement {
+    private final IStatement firstStatement;
+    private final IStatement secondStatement;
+
+    public CompoundStatement(IStatement firstStatement, IStatement secondStatement) {
+        this.firstStatement = firstStatement;
+        this.secondStatement = secondStatement;
+    }
+
+    @Override
+    public ProgramState execute(ProgramState state) {
+        IStack<IStatement> executionStack = state.getExecutionStack();
+        executionStack.push(this.secondStatement);
+        executionStack.push(this.firstStatement);
+        return state;
+    }
+
+    @Override
+    public IStatement deepCopy() {
+        return new CompoundStatement(this.firstStatement.deepCopy(), this.secondStatement.deepCopy());
+    }
+
+    @Override
+    public String toString() {
+        return "(" + this.firstStatement.toString() + ";" + this.secondStatement.toString() + ")";
+    }
+}
