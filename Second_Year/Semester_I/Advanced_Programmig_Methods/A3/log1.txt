@@ -1,0 +1,48 @@
+Execution stack:
+(int v;(v = 2;print(v)))
+SymTable:
+Output:
+FileTable:
+OriginalProgram: (int v;(v = 2;print(v)))
+
+Execution stack:
+int v
+(v = 2;print(v))
+SymTable:
+Output:
+FileTable:
+OriginalProgram: (int v;(v = 2;print(v)))
+
+Execution stack:
+(v = 2;print(v))
+SymTable:
+v(int) -> 0
+Output:
+FileTable:
+OriginalProgram: (int v;(v = 2;print(v)))
+
+Execution stack:
+v = 2
+print(v)
+SymTable:
+v(int) -> 0
+Output:
+FileTable:
+OriginalProgram: (int v;(v = 2;print(v)))
+
+Execution stack:
+print(v)
+SymTable:
+v(int) -> 2
+Output:
+FileTable:
+OriginalProgram: (int v;(v = 2;print(v)))
+
+Execution stack:
+SymTable:
+v(int) -> 2
+Output:
+2
+FileTable:
+OriginalProgram: (int v;(v = 2;print(v)))
+

@@ -1,0 +1,88 @@
+Execution stack:
+(int a;(int b;(a = 2 + 3 * 5;(b = a + 1;print(b)))))
+SymTable:
+Output:
+FileTable:
+OriginalProgram: (int a;(int b;(a = 2 + 3 * 5;(b = a + 1;print(b)))))
+
+Execution stack:
+int a
+(int b;(a = 2 + 3 * 5;(b = a + 1;print(b))))
+SymTable:
+Output:
+FileTable:
+OriginalProgram: (int a;(int b;(a = 2 + 3 * 5;(b = a + 1;print(b)))))
+
+Execution stack:
+(int b;(a = 2 + 3 * 5;(b = a + 1;print(b))))
+SymTable:
+a(int) -> 0
+Output:
+FileTable:
+OriginalProgram: (int a;(int b;(a = 2 + 3 * 5;(b = a + 1;print(b)))))
+
+Execution stack:
+int b
+(a = 2 + 3 * 5;(b = a + 1;print(b)))
+SymTable:
+a(int) -> 0
+Output:
+FileTable:
+OriginalProgram: (int a;(int b;(a = 2 + 3 * 5;(b = a + 1;print(b)))))
+
+Execution stack:
+(a = 2 + 3 * 5;(b = a + 1;print(b)))
+SymTable:
+a(int) -> 0
+b(int) -> 0
+Output:
+FileTable:
+OriginalProgram: (int a;(int b;(a = 2 + 3 * 5;(b = a + 1;print(b)))))
+
+Execution stack:
+a = 2 + 3 * 5
+(b = a + 1;print(b))
+SymTable:
+a(int) -> 0
+b(int) -> 0
+Output:
+FileTable:
+OriginalProgram: (int a;(int b;(a = 2 + 3 * 5;(b = a + 1;print(b)))))
+
+Execution stack:
+(b = a + 1;print(b))
+SymTable:
+a(int) -> 17
+b(int) -> 0
+Output:
+FileTable:
+OriginalProgram: (int a;(int b;(a = 2 + 3 * 5;(b = a + 1;print(b)))))
+
+Execution stack:
+b = a + 1
+print(b)
+SymTable:
+a(int) -> 17
+b(int) -> 0
+Output:
+FileTable:
+OriginalProgram: (int a;(int b;(a = 2 + 3 * 5;(b = a + 1;print(b)))))
+
+Execution stack:
+print(b)
+SymTable:
+a(int) -> 17
+b(int) -> 18
+Output:
+FileTable:
+OriginalProgram: (int a;(int b;(a = 2 + 3 * 5;(b = a + 1;print(b)))))
+
+Execution stack:
+SymTable:
+a(int) -> 17
+b(int) -> 18
+Output:
+18
+FileTable:
+OriginalProgram: (int a;(int b;(a = 2 + 3 * 5;(b = a + 1;print(b)))))
+
