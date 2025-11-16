@@ -1,0 +1,23 @@
+package model.state.heap;
+
+import exceptions.MyException;
+import exceptions.MyKeyNotFoundException;
+import model.ADTs.dictionary.IDictionary;
+import model.type.Type;
+import model.value.Value;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
+public interface IHeap {
+    boolean isDefined(Integer address);
+    int insert(Value value);
+    Value getValueForKey(Integer address) throws MyException;
+    void update(Integer address, Value value) throws MyException;
+    void remove(Integer address) throws MyException;
+    Map<Integer, Value> getContent();
+    void setContent(HashMap<Integer, Value> heap);
+    Set<Integer> keySet();
+    String toString();
+}

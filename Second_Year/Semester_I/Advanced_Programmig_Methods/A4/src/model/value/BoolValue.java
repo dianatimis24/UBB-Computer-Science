@@ -1,0 +1,36 @@
+package model.value;
+
+import model.type.BoolType;
+import model.type.Type;
+
+public class BoolValue implements Value {
+    private final boolean value;
+
+    public BoolValue(boolean value) {
+        this.value = value;
+    }
+
+    public boolean getValue() {
+        return this.value;
+    }
+
+    @Override
+    public Type getType() {
+        return new BoolType();
+    }
+
+    @Override
+    public boolean equals(Value other) {
+        return other instanceof BoolValue && ((BoolValue) other).value == this.value;
+    }
+
+    @Override
+    public Value deepCopy() {
+        return new BoolValue(this.value);
+    }
+
+    @Override
+    public String toString() {
+        return String.valueOf(this.value);
+    }
+}

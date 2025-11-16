@@ -1,0 +1,254 @@
+Execution stack:
+(Reference(int) v;(new(v, 20);(Reference(Reference(int)) a;(new(a, v);(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a))))))))
+SymTable:
+Output:
+FileTable:
+Heap:
+OriginalProgram: (Reference(int) v;(new(v, 20);(Reference(Reference(int)) a;(new(a, v);(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a))))))))
+
+Execution stack:
+Reference(int) v
+(new(v, 20);(Reference(Reference(int)) a;(new(a, v);(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a)))))))
+SymTable:
+Output:
+FileTable:
+Heap:
+OriginalProgram: (Reference(int) v;(new(v, 20);(Reference(Reference(int)) a;(new(a, v);(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a))))))))
+
+Execution stack:
+Reference(int) v
+(new(v, 20);(Reference(Reference(int)) a;(new(a, v);(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a)))))))
+SymTable:
+Output:
+FileTable:
+Heap:
+OriginalProgram: (Reference(int) v;(new(v, 20);(Reference(Reference(int)) a;(new(a, v);(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a))))))))
+
+Execution stack:
+(new(v, 20);(Reference(Reference(int)) a;(new(a, v);(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a)))))))
+SymTable:
+v(Reference(int)) -> ReferenceValue(0, int)
+Output:
+FileTable:
+Heap:
+OriginalProgram: (Reference(int) v;(new(v, 20);(Reference(Reference(int)) a;(new(a, v);(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a))))))))
+
+Execution stack:
+(new(v, 20);(Reference(Reference(int)) a;(new(a, v);(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a)))))))
+SymTable:
+v(Reference(int)) -> ReferenceValue(0, int)
+Output:
+FileTable:
+Heap:
+OriginalProgram: (Reference(int) v;(new(v, 20);(Reference(Reference(int)) a;(new(a, v);(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a))))))))
+
+Execution stack:
+new(v, 20)
+(Reference(Reference(int)) a;(new(a, v);(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a))))))
+SymTable:
+v(Reference(int)) -> ReferenceValue(0, int)
+Output:
+FileTable:
+Heap:
+OriginalProgram: (Reference(int) v;(new(v, 20);(Reference(Reference(int)) a;(new(a, v);(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a))))))))
+
+Execution stack:
+new(v, 20)
+(Reference(Reference(int)) a;(new(a, v);(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a))))))
+SymTable:
+v(Reference(int)) -> ReferenceValue(0, int)
+Output:
+FileTable:
+Heap:
+OriginalProgram: (Reference(int) v;(new(v, 20);(Reference(Reference(int)) a;(new(a, v);(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a))))))))
+
+Execution stack:
+(Reference(Reference(int)) a;(new(a, v);(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a))))))
+SymTable:
+v(Reference(int)) -> ReferenceValue(1, int)
+Output:
+FileTable:
+Heap:
+1(int):-> 20
+OriginalProgram: (Reference(int) v;(new(v, 20);(Reference(Reference(int)) a;(new(a, v);(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a))))))))
+
+Execution stack:
+(Reference(Reference(int)) a;(new(a, v);(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a))))))
+SymTable:
+v(Reference(int)) -> ReferenceValue(1, int)
+Output:
+FileTable:
+Heap:
+1(int):-> 20
+OriginalProgram: (Reference(int) v;(new(v, 20);(Reference(Reference(int)) a;(new(a, v);(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a))))))))
+
+Execution stack:
+Reference(Reference(int)) a
+(new(a, v);(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a)))))
+SymTable:
+v(Reference(int)) -> ReferenceValue(1, int)
+Output:
+FileTable:
+Heap:
+1(int):-> 20
+OriginalProgram: (Reference(int) v;(new(v, 20);(Reference(Reference(int)) a;(new(a, v);(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a))))))))
+
+Execution stack:
+Reference(Reference(int)) a
+(new(a, v);(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a)))))
+SymTable:
+v(Reference(int)) -> ReferenceValue(1, int)
+Output:
+FileTable:
+Heap:
+1(int):-> 20
+OriginalProgram: (Reference(int) v;(new(v, 20);(Reference(Reference(int)) a;(new(a, v);(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a))))))))
+
+Execution stack:
+(new(a, v);(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a)))))
+SymTable:
+a(Reference(Reference(int))) -> ReferenceValue(0, Reference(int))
+v(Reference(int)) -> ReferenceValue(1, int)
+Output:
+FileTable:
+Heap:
+1(int):-> 20
+OriginalProgram: (Reference(int) v;(new(v, 20);(Reference(Reference(int)) a;(new(a, v);(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a))))))))
+
+Execution stack:
+(new(a, v);(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a)))))
+SymTable:
+a(Reference(Reference(int))) -> ReferenceValue(0, Reference(int))
+v(Reference(int)) -> ReferenceValue(1, int)
+Output:
+FileTable:
+Heap:
+1(int):-> 20
+OriginalProgram: (Reference(int) v;(new(v, 20);(Reference(Reference(int)) a;(new(a, v);(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a))))))))
+
+Execution stack:
+new(a, v)
+(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a))))
+SymTable:
+a(Reference(Reference(int))) -> ReferenceValue(0, Reference(int))
+v(Reference(int)) -> ReferenceValue(1, int)
+Output:
+FileTable:
+Heap:
+1(int):-> 20
+OriginalProgram: (Reference(int) v;(new(v, 20);(Reference(Reference(int)) a;(new(a, v);(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a))))))))
+
+Execution stack:
+new(a, v)
+(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a))))
+SymTable:
+a(Reference(Reference(int))) -> ReferenceValue(0, Reference(int))
+v(Reference(int)) -> ReferenceValue(1, int)
+Output:
+FileTable:
+Heap:
+1(int):-> 20
+OriginalProgram: (Reference(int) v;(new(v, 20);(Reference(Reference(int)) a;(new(a, v);(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a))))))))
+
+Execution stack:
+(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a))))
+SymTable:
+a(Reference(Reference(int))) -> ReferenceValue(2, Reference(int))
+v(Reference(int)) -> ReferenceValue(1, int)
+Output:
+FileTable:
+Heap:
+1(int):-> 20
+2(Reference(int)):-> ReferenceValue(1, int)
+OriginalProgram: (Reference(int) v;(new(v, 20);(Reference(Reference(int)) a;(new(a, v);(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a))))))))
+
+Execution stack:
+(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a))))
+SymTable:
+a(Reference(Reference(int))) -> ReferenceValue(2, Reference(int))
+v(Reference(int)) -> ReferenceValue(1, int)
+Output:
+FileTable:
+Heap:
+1(int):-> 20
+2(Reference(int)):-> ReferenceValue(1, int)
+OriginalProgram: (Reference(int) v;(new(v, 20);(Reference(Reference(int)) a;(new(a, v);(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a))))))))
+
+Execution stack:
+new(v, 30)
+print(ReadHeapExpression(ReadHeapExpression(a)))
+SymTable:
+a(Reference(Reference(int))) -> ReferenceValue(2, Reference(int))
+v(Reference(int)) -> ReferenceValue(1, int)
+Output:
+FileTable:
+Heap:
+1(int):-> 20
+2(Reference(int)):-> ReferenceValue(1, int)
+OriginalProgram: (Reference(int) v;(new(v, 20);(Reference(Reference(int)) a;(new(a, v);(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a))))))))
+
+Execution stack:
+new(v, 30)
+print(ReadHeapExpression(ReadHeapExpression(a)))
+SymTable:
+a(Reference(Reference(int))) -> ReferenceValue(2, Reference(int))
+v(Reference(int)) -> ReferenceValue(1, int)
+Output:
+FileTable:
+Heap:
+1(int):-> 20
+2(Reference(int)):-> ReferenceValue(1, int)
+OriginalProgram: (Reference(int) v;(new(v, 20);(Reference(Reference(int)) a;(new(a, v);(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a))))))))
+
+Execution stack:
+print(ReadHeapExpression(ReadHeapExpression(a)))
+SymTable:
+a(Reference(Reference(int))) -> ReferenceValue(2, Reference(int))
+v(Reference(int)) -> ReferenceValue(3, int)
+Output:
+FileTable:
+Heap:
+1(int):-> 20
+2(Reference(int)):-> ReferenceValue(1, int)
+3(int):-> 30
+OriginalProgram: (Reference(int) v;(new(v, 20);(Reference(Reference(int)) a;(new(a, v);(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a))))))))
+
+Execution stack:
+print(ReadHeapExpression(ReadHeapExpression(a)))
+SymTable:
+a(Reference(Reference(int))) -> ReferenceValue(2, Reference(int))
+v(Reference(int)) -> ReferenceValue(3, int)
+Output:
+FileTable:
+Heap:
+1(int):-> 20
+2(Reference(int)):-> ReferenceValue(1, int)
+3(int):-> 30
+OriginalProgram: (Reference(int) v;(new(v, 20);(Reference(Reference(int)) a;(new(a, v);(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a))))))))
+
+Execution stack:
+SymTable:
+a(Reference(Reference(int))) -> ReferenceValue(2, Reference(int))
+v(Reference(int)) -> ReferenceValue(3, int)
+Output:
+20
+FileTable:
+Heap:
+1(int):-> 20
+2(Reference(int)):-> ReferenceValue(1, int)
+3(int):-> 30
+OriginalProgram: (Reference(int) v;(new(v, 20);(Reference(Reference(int)) a;(new(a, v);(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a))))))))
+
+Execution stack:
+SymTable:
+a(Reference(Reference(int))) -> ReferenceValue(2, Reference(int))
+v(Reference(int)) -> ReferenceValue(3, int)
+Output:
+20
+FileTable:
+Heap:
+1(int):-> 20
+2(Reference(int)):-> ReferenceValue(1, int)
+3(int):-> 30
+OriginalProgram: (Reference(int) v;(new(v, 20);(Reference(Reference(int)) a;(new(a, v);(new(v, 30);print(ReadHeapExpression(ReadHeapExpression(a))))))))
+

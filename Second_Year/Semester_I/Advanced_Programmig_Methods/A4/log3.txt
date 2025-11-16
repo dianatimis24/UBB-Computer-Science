@@ -1,0 +1,98 @@
+Execution stack:
+(bool a;(int v;(a = true;(if(a) then {v = 2} else {v = 3};print(v)))))
+SymTable:
+Output:
+FileTable:
+OriginalProgram: (bool a;(int v;(a = true;(if(a) then {v = 2} else {v = 3};print(v)))))
+
+Execution stack:
+bool a
+(int v;(a = true;(if(a) then {v = 2} else {v = 3};print(v))))
+SymTable:
+Output:
+FileTable:
+OriginalProgram: (bool a;(int v;(a = true;(if(a) then {v = 2} else {v = 3};print(v)))))
+
+Execution stack:
+(int v;(a = true;(if(a) then {v = 2} else {v = 3};print(v))))
+SymTable:
+a(bool) -> false
+Output:
+FileTable:
+OriginalProgram: (bool a;(int v;(a = true;(if(a) then {v = 2} else {v = 3};print(v)))))
+
+Execution stack:
+int v
+(a = true;(if(a) then {v = 2} else {v = 3};print(v)))
+SymTable:
+a(bool) -> false
+Output:
+FileTable:
+OriginalProgram: (bool a;(int v;(a = true;(if(a) then {v = 2} else {v = 3};print(v)))))
+
+Execution stack:
+(a = true;(if(a) then {v = 2} else {v = 3};print(v)))
+SymTable:
+a(bool) -> false
+v(int) -> 0
+Output:
+FileTable:
+OriginalProgram: (bool a;(int v;(a = true;(if(a) then {v = 2} else {v = 3};print(v)))))
+
+Execution stack:
+a = true
+(if(a) then {v = 2} else {v = 3};print(v))
+SymTable:
+a(bool) -> false
+v(int) -> 0
+Output:
+FileTable:
+OriginalProgram: (bool a;(int v;(a = true;(if(a) then {v = 2} else {v = 3};print(v)))))
+
+Execution stack:
+(if(a) then {v = 2} else {v = 3};print(v))
+SymTable:
+a(bool) -> true
+v(int) -> 0
+Output:
+FileTable:
+OriginalProgram: (bool a;(int v;(a = true;(if(a) then {v = 2} else {v = 3};print(v)))))
+
+Execution stack:
+if(a) then {v = 2} else {v = 3}
+print(v)
+SymTable:
+a(bool) -> true
+v(int) -> 0
+Output:
+FileTable:
+OriginalProgram: (bool a;(int v;(a = true;(if(a) then {v = 2} else {v = 3};print(v)))))
+
+Execution stack:
+v = 2
+print(v)
+SymTable:
+a(bool) -> true
+v(int) -> 0
+Output:
+FileTable:
+OriginalProgram: (bool a;(int v;(a = true;(if(a) then {v = 2} else {v = 3};print(v)))))
+
+Execution stack:
+print(v)
+SymTable:
+a(bool) -> true
+v(int) -> 2
+Output:
+FileTable:
+OriginalProgram: (bool a;(int v;(a = true;(if(a) then {v = 2} else {v = 3};print(v)))))
+
+Execution stack:
+SymTable:
+a(bool) -> true
+v(int) -> 2
+Output:
+2
+FileTable:
+OriginalProgram: (bool a;(int v;(a = true;(if(a) then {v = 2} else {v = 3};print(v)))))
+
