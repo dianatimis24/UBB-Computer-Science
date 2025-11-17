@@ -9,10 +9,7 @@ import model.value.ReferenceValue;
 import model.value.Value;
 import repository.IRepository;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Controller implements IController {
@@ -44,24 +41,39 @@ public class Controller implements IController {
         }
     }
 
-    public Map<Integer, Value> safeGarbageCollector(List<Integer> symbolTableAddresses, List<Integer> heapAddresses, Map<Integer,Value> heap) {
-        return heap.entrySet().stream()
-                .filter(elem -> (symbolTableAddresses.contains(elem.getKey()) || heapAddresses.contains(elem.getKey())))
-                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
-    }
-
-    public List<Integer> getAddressesFromSymbolTable(Collection<Value> symbolTableValues) {
+    public Set<Integer> getAddressesFromSymbolTable(Collection<Value> symbolTableValues) {
         return symbolTableValues.stream()
                 .filter(v -> v instanceof ReferenceValue)
                 .map(v -> {ReferenceValue v1 = (ReferenceValue) v; return v1.getAddress();})
-                .collect(Collectors.toList());
+                .collect(Collectors.toSet());
     }
 
-    public List<Integer> getAddressesFromHeap(Collection<Value> heapValues) {
-        return heapValues.stream()
-                .filter(v -> v instanceof ReferenceValue)
-                .map(v -> {ReferenceValue v1 = (ReferenceValue) v; return v1.getAddress();})
-                .collect(Collectors.toList());
+    public Set<Integer> computeReachableAddressesInTheHeap(Set<Integer> roots, Map<Integer, Value> heap) {
+        Set<Integer> reachableAddresses = new HashSet<>(roots);
+        Stack<Integer> reachableAddressesStack = new Stack<>();
+        reachableAddressesStack.addAll(roots);
+
+        while (!reachableAddressesStack.isEmpty()) {
+            int address = reachableAddressesStack.pop();
+            Value v = heap.get(address);
+            if (v instanceof ReferenceValue referenceValue) {
+                int nextAddress = referenceValue.getAddress();
+                if (!reachableAddresses.contains(nextAddress)) {
+                    reachableAddresses.add(nextAddress);
+                    reachableAddressesStack.push(nextAddress);
+                }
+            }
+        }
+
+        return reachableAddresses;
+    }
+
+    public Map<Integer, Value> safeGarbageCollector(Collection<Value> symbolTableValues, Map<Integer, Value> heap) {
+        Set<Integer> roots = getAddressesFromSymbolTable(symbolTableValues);
+        Set<Integer> reachable = computeReachableAddressesInTheHeap(roots, heap);
+        return heap.entrySet().stream()
+                .filter(elem -> reachable.contains(elem.getKey()))
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
 
     @Override
@@ -89,8 +101,7 @@ public class Controller implements IController {
             currentProgramState = executeOneStep(currentProgramState);
             this.repository.logProgramStateExecution(currentProgramState);
             currentProgramState.getHeap().setContent((HashMap<Integer, Value>) safeGarbageCollector(
-                    getAddressesFromSymbolTable(currentProgramState.getSymbolTable().getMap().values()),
-                    getAddressesFromHeap(currentProgramState.getHeap().getContent().values()),
+                    currentProgramState.getSymbolTable().getMap().values(),
                     currentProgramState.getHeap().getContent()));
 
             this.repository.logProgramStateExecution(currentProgramState);
