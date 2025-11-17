@@ -161,6 +161,22 @@ public class View {
                                 new PrintStatement(new VariableExpression("v")))));
     }
 
+    private static IStatement createExample10() {
+        // Ref int v;new(v,20);Ref int a; new(a, 40); new(v,30);print(rH(rH(a)))
+        return new CompoundStatement(
+                new VariableDeclarationStatement("v", new ReferenceType(new IntType())),
+                new CompoundStatement(
+                        new NewStatement("v", new ValueExpression(new IntValue(20))),
+                        new CompoundStatement(
+                                new VariableDeclarationStatement("a",
+                                        new ReferenceType(new IntType())),
+                                new CompoundStatement(
+                                        new NewStatement("a", new ValueExpression(new IntValue(40))),
+                                        new CompoundStatement(
+                                                new NewStatement("v", new ValueExpression(new IntValue(30))),
+                                                new PrintStatement(new ReadHeapExpression(new ReadHeapExpression( new VariableExpression("a")))))))));
+    }
+
     private static ProgramState createProgramState(IStatement originalProgram) {
         IExecutionStack executionStack = new ExecutionStack();
         ISymbolTable symbolTable = new SymbolTable();
@@ -190,6 +206,7 @@ public class View {
         menu.addCommand(new RunExampleCommand("7", createExample7(), createController(createExample7(), "log7.txt")));
         menu.addCommand(new RunExampleCommand("8", createExample8(), createController(createExample8(), "log8.txt")));
         menu.addCommand(new RunExampleCommand("9", createExample9(), createController(createExample9(), "log9.txt")));
+        menu.addCommand(new RunExampleCommand("10", createExample10(), createController(createExample10(), "log10.txt")));
         menu.addCommand(new ExitCommand("0", "Exit"));
 
         menu.show();
