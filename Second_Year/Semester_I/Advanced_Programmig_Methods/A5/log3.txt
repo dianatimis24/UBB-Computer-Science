@@ -1,0 +1,220 @@
+3: ProgramState{
+Execution stack:
+(bool a;(int v;(a = true;(if(a) then {v = 2} else {v = 3};print(v)))))
+SymTable:
+Output:
+FileTable:
+Heap:
+}
+
+3: ProgramState{
+Execution stack:
+bool a
+(int v;(a = true;(if(a) then {v = 2} else {v = 3};print(v))))
+SymTable:
+Output:
+FileTable:
+Heap:
+}
+
+3: ProgramState{
+Execution stack:
+bool a
+(int v;(a = true;(if(a) then {v = 2} else {v = 3};print(v))))
+SymTable:
+Output:
+FileTable:
+Heap:
+}
+
+3: ProgramState{
+Execution stack:
+(int v;(a = true;(if(a) then {v = 2} else {v = 3};print(v))))
+SymTable:
+a(bool) -> false
+Output:
+FileTable:
+Heap:
+}
+
+3: ProgramState{
+Execution stack:
+(int v;(a = true;(if(a) then {v = 2} else {v = 3};print(v))))
+SymTable:
+a(bool) -> false
+Output:
+FileTable:
+Heap:
+}
+
+3: ProgramState{
+Execution stack:
+int v
+(a = true;(if(a) then {v = 2} else {v = 3};print(v)))
+SymTable:
+a(bool) -> false
+Output:
+FileTable:
+Heap:
+}
+
+3: ProgramState{
+Execution stack:
+int v
+(a = true;(if(a) then {v = 2} else {v = 3};print(v)))
+SymTable:
+a(bool) -> false
+Output:
+FileTable:
+Heap:
+}
+
+3: ProgramState{
+Execution stack:
+(a = true;(if(a) then {v = 2} else {v = 3};print(v)))
+SymTable:
+a(bool) -> false
+v(int) -> 0
+Output:
+FileTable:
+Heap:
+}
+
+3: ProgramState{
+Execution stack:
+(a = true;(if(a) then {v = 2} else {v = 3};print(v)))
+SymTable:
+a(bool) -> false
+v(int) -> 0
+Output:
+FileTable:
+Heap:
+}
+
+3: ProgramState{
+Execution stack:
+a = true
+(if(a) then {v = 2} else {v = 3};print(v))
+SymTable:
+a(bool) -> false
+v(int) -> 0
+Output:
+FileTable:
+Heap:
+}
+
+3: ProgramState{
+Execution stack:
+a = true
+(if(a) then {v = 2} else {v = 3};print(v))
+SymTable:
+a(bool) -> false
+v(int) -> 0
+Output:
+FileTable:
+Heap:
+}
+
+3: ProgramState{
+Execution stack:
+(if(a) then {v = 2} else {v = 3};print(v))
+SymTable:
+a(bool) -> true
+v(int) -> 0
+Output:
+FileTable:
+Heap:
+}
+
+3: ProgramState{
+Execution stack:
+(if(a) then {v = 2} else {v = 3};print(v))
+SymTable:
+a(bool) -> true
+v(int) -> 0
+Output:
+FileTable:
+Heap:
+}
+
+3: ProgramState{
+Execution stack:
+if(a) then {v = 2} else {v = 3}
+print(v)
+SymTable:
+a(bool) -> true
+v(int) -> 0
+Output:
+FileTable:
+Heap:
+}
+
+3: ProgramState{
+Execution stack:
+if(a) then {v = 2} else {v = 3}
+print(v)
+SymTable:
+a(bool) -> true
+v(int) -> 0
+Output:
+FileTable:
+Heap:
+}
+
+3: ProgramState{
+Execution stack:
+v = 2
+print(v)
+SymTable:
+a(bool) -> true
+v(int) -> 0
+Output:
+FileTable:
+Heap:
+}
+
+3: ProgramState{
+Execution stack:
+v = 2
+print(v)
+SymTable:
+a(bool) -> true
+v(int) -> 0
+Output:
+FileTable:
+Heap:
+}
+
+3: ProgramState{
+Execution stack:
+print(v)
+SymTable:
+a(bool) -> true
+v(int) -> 2
+Output:
+FileTable:
+Heap:
+}
+
+3: ProgramState{
+Execution stack:
+print(v)
+SymTable:
+a(bool) -> true
+v(int) -> 2
+Output:
+FileTable:
+Heap:
+}
+
+3: ProgramState{
+Execution stack:
+SymTable:
+a(bool) -> true
+v(int) -> 2
+Output:
+2
+FileTable:
+Heap:
+}
+

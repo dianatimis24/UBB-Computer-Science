@@ -1,0 +1,603 @@
+9: ProgramState{
+Execution stack:
+(int v;(v = 4;(While(v > 0){(print(v);v = v - 1)};;print(v))))
+SymTable:
+Output:
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+int v
+(v = 4;(While(v > 0){(print(v);v = v - 1)};;print(v)))
+SymTable:
+Output:
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+int v
+(v = 4;(While(v > 0){(print(v);v = v - 1)};;print(v)))
+SymTable:
+Output:
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+(v = 4;(While(v > 0){(print(v);v = v - 1)};;print(v)))
+SymTable:
+v(int) -> 0
+Output:
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+(v = 4;(While(v > 0){(print(v);v = v - 1)};;print(v)))
+SymTable:
+v(int) -> 0
+Output:
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+v = 4
+(While(v > 0){(print(v);v = v - 1)};;print(v))
+SymTable:
+v(int) -> 0
+Output:
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+v = 4
+(While(v > 0){(print(v);v = v - 1)};;print(v))
+SymTable:
+v(int) -> 0
+Output:
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+(While(v > 0){(print(v);v = v - 1)};;print(v))
+SymTable:
+v(int) -> 4
+Output:
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+(While(v > 0){(print(v);v = v - 1)};;print(v))
+SymTable:
+v(int) -> 4
+Output:
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+While(v > 0){(print(v);v = v - 1)};
+print(v)
+SymTable:
+v(int) -> 4
+Output:
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+While(v > 0){(print(v);v = v - 1)};
+print(v)
+SymTable:
+v(int) -> 4
+Output:
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+(print(v);v = v - 1)
+While(v > 0){(print(v);v = v - 1)};
+print(v)
+SymTable:
+v(int) -> 4
+Output:
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+(print(v);v = v - 1)
+While(v > 0){(print(v);v = v - 1)};
+print(v)
+SymTable:
+v(int) -> 4
+Output:
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+print(v)
+v = v - 1
+While(v > 0){(print(v);v = v - 1)};
+print(v)
+SymTable:
+v(int) -> 4
+Output:
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+print(v)
+v = v - 1
+While(v > 0){(print(v);v = v - 1)};
+print(v)
+SymTable:
+v(int) -> 4
+Output:
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+v = v - 1
+While(v > 0){(print(v);v = v - 1)};
+print(v)
+SymTable:
+v(int) -> 4
+Output:
+4
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+v = v - 1
+While(v > 0){(print(v);v = v - 1)};
+print(v)
+SymTable:
+v(int) -> 4
+Output:
+4
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+While(v > 0){(print(v);v = v - 1)};
+print(v)
+SymTable:
+v(int) -> 3
+Output:
+4
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+While(v > 0){(print(v);v = v - 1)};
+print(v)
+SymTable:
+v(int) -> 3
+Output:
+4
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+(print(v);v = v - 1)
+While(v > 0){(print(v);v = v - 1)};
+print(v)
+SymTable:
+v(int) -> 3
+Output:
+4
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+(print(v);v = v - 1)
+While(v > 0){(print(v);v = v - 1)};
+print(v)
+SymTable:
+v(int) -> 3
+Output:
+4
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+print(v)
+v = v - 1
+While(v > 0){(print(v);v = v - 1)};
+print(v)
+SymTable:
+v(int) -> 3
+Output:
+4
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+print(v)
+v = v - 1
+While(v > 0){(print(v);v = v - 1)};
+print(v)
+SymTable:
+v(int) -> 3
+Output:
+4
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+v = v - 1
+While(v > 0){(print(v);v = v - 1)};
+print(v)
+SymTable:
+v(int) -> 3
+Output:
+4
+3
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+v = v - 1
+While(v > 0){(print(v);v = v - 1)};
+print(v)
+SymTable:
+v(int) -> 3
+Output:
+4
+3
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+While(v > 0){(print(v);v = v - 1)};
+print(v)
+SymTable:
+v(int) -> 2
+Output:
+4
+3
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+While(v > 0){(print(v);v = v - 1)};
+print(v)
+SymTable:
+v(int) -> 2
+Output:
+4
+3
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+(print(v);v = v - 1)
+While(v > 0){(print(v);v = v - 1)};
+print(v)
+SymTable:
+v(int) -> 2
+Output:
+4
+3
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+(print(v);v = v - 1)
+While(v > 0){(print(v);v = v - 1)};
+print(v)
+SymTable:
+v(int) -> 2
+Output:
+4
+3
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+print(v)
+v = v - 1
+While(v > 0){(print(v);v = v - 1)};
+print(v)
+SymTable:
+v(int) -> 2
+Output:
+4
+3
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+print(v)
+v = v - 1
+While(v > 0){(print(v);v = v - 1)};
+print(v)
+SymTable:
+v(int) -> 2
+Output:
+4
+3
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+v = v - 1
+While(v > 0){(print(v);v = v - 1)};
+print(v)
+SymTable:
+v(int) -> 2
+Output:
+4
+3
+2
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+v = v - 1
+While(v > 0){(print(v);v = v - 1)};
+print(v)
+SymTable:
+v(int) -> 2
+Output:
+4
+3
+2
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+While(v > 0){(print(v);v = v - 1)};
+print(v)
+SymTable:
+v(int) -> 1
+Output:
+4
+3
+2
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+While(v > 0){(print(v);v = v - 1)};
+print(v)
+SymTable:
+v(int) -> 1
+Output:
+4
+3
+2
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+(print(v);v = v - 1)
+While(v > 0){(print(v);v = v - 1)};
+print(v)
+SymTable:
+v(int) -> 1
+Output:
+4
+3
+2
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+(print(v);v = v - 1)
+While(v > 0){(print(v);v = v - 1)};
+print(v)
+SymTable:
+v(int) -> 1
+Output:
+4
+3
+2
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+print(v)
+v = v - 1
+While(v > 0){(print(v);v = v - 1)};
+print(v)
+SymTable:
+v(int) -> 1
+Output:
+4
+3
+2
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+print(v)
+v = v - 1
+While(v > 0){(print(v);v = v - 1)};
+print(v)
+SymTable:
+v(int) -> 1
+Output:
+4
+3
+2
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+v = v - 1
+While(v > 0){(print(v);v = v - 1)};
+print(v)
+SymTable:
+v(int) -> 1
+Output:
+4
+3
+2
+1
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+v = v - 1
+While(v > 0){(print(v);v = v - 1)};
+print(v)
+SymTable:
+v(int) -> 1
+Output:
+4
+3
+2
+1
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+While(v > 0){(print(v);v = v - 1)};
+print(v)
+SymTable:
+v(int) -> 0
+Output:
+4
+3
+2
+1
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+While(v > 0){(print(v);v = v - 1)};
+print(v)
+SymTable:
+v(int) -> 0
+Output:
+4
+3
+2
+1
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+print(v)
+SymTable:
+v(int) -> 0
+Output:
+4
+3
+2
+1
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+print(v)
+SymTable:
+v(int) -> 0
+Output:
+4
+3
+2
+1
+FileTable:
+Heap:
+}
+
+9: ProgramState{
+Execution stack:
+SymTable:
+v(int) -> 0
+Output:
+4
+3
+2
+1
+0
+FileTable:
+Heap:
+}
+

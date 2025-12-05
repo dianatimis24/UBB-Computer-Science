@@ -1,0 +1,407 @@
+4: ProgramState{
+Execution stack:
+(String varf;(varf = test.in;(openRFile(varf);(int varc;(readFile(varf, varc);(print(varc);(readFile(varf, varc);(print(varc);closeRFile(varf)))))))))
+SymTable:
+Output:
+FileTable:
+Heap:
+}
+
+4: ProgramState{
+Execution stack:
+String varf
+(varf = test.in;(openRFile(varf);(int varc;(readFile(varf, varc);(print(varc);(readFile(varf, varc);(print(varc);closeRFile(varf))))))))
+SymTable:
+Output:
+FileTable:
+Heap:
+}
+
+4: ProgramState{
+Execution stack:
+String varf
+(varf = test.in;(openRFile(varf);(int varc;(readFile(varf, varc);(print(varc);(readFile(varf, varc);(print(varc);closeRFile(varf))))))))
+SymTable:
+Output:
+FileTable:
+Heap:
+}
+
+4: ProgramState{
+Execution stack:
+(varf = test.in;(openRFile(varf);(int varc;(readFile(varf, varc);(print(varc);(readFile(varf, varc);(print(varc);closeRFile(varf))))))))
+SymTable:
+varf(String) ->
+Output:
+FileTable:
+Heap:
+}
+
+4: ProgramState{
+Execution stack:
+(varf = test.in;(openRFile(varf);(int varc;(readFile(varf, varc);(print(varc);(readFile(varf, varc);(print(varc);closeRFile(varf))))))))
+SymTable:
+varf(String) ->
+Output:
+FileTable:
+Heap:
+}
+
+4: ProgramState{
+Execution stack:
+varf = test.in
+(openRFile(varf);(int varc;(readFile(varf, varc);(print(varc);(readFile(varf, varc);(print(varc);closeRFile(varf)))))))
+SymTable:
+varf(String) ->
+Output:
+FileTable:
+Heap:
+}
+
+4: ProgramState{
+Execution stack:
+varf = test.in
+(openRFile(varf);(int varc;(readFile(varf, varc);(print(varc);(readFile(varf, varc);(print(varc);closeRFile(varf)))))))
+SymTable:
+varf(String) ->
+Output:
+FileTable:
+Heap:
+}
+
+4: ProgramState{
+Execution stack:
+(openRFile(varf);(int varc;(readFile(varf, varc);(print(varc);(readFile(varf, varc);(print(varc);closeRFile(varf)))))))
+SymTable:
+varf(String) -> test.in
+Output:
+FileTable:
+Heap:
+}
+
+4: ProgramState{
+Execution stack:
+(openRFile(varf);(int varc;(readFile(varf, varc);(print(varc);(readFile(varf, varc);(print(varc);closeRFile(varf)))))))
+SymTable:
+varf(String) -> test.in
+Output:
+FileTable:
+Heap:
+}
+
+4: ProgramState{
+Execution stack:
+openRFile(varf)
+(int varc;(readFile(varf, varc);(print(varc);(readFile(varf, varc);(print(varc);closeRFile(varf))))))
+SymTable:
+varf(String) -> test.in
+Output:
+FileTable:
+Heap:
+}
+
+4: ProgramState{
+Execution stack:
+openRFile(varf)
+(int varc;(readFile(varf, varc);(print(varc);(readFile(varf, varc);(print(varc);closeRFile(varf))))))
+SymTable:
+varf(String) -> test.in
+Output:
+FileTable:
+Heap:
+}
+
+4: ProgramState{
+Execution stack:
+(int varc;(readFile(varf, varc);(print(varc);(readFile(varf, varc);(print(varc);closeRFile(varf))))))
+SymTable:
+varf(String) -> test.in
+Output:
+FileTable:
+test.in
+Heap:
+}
+
+4: ProgramState{
+Execution stack:
+(int varc;(readFile(varf, varc);(print(varc);(readFile(varf, varc);(print(varc);closeRFile(varf))))))
+SymTable:
+varf(String) -> test.in
+Output:
+FileTable:
+test.in
+Heap:
+}
+
+4: ProgramState{
+Execution stack:
+int varc
+(readFile(varf, varc);(print(varc);(readFile(varf, varc);(print(varc);closeRFile(varf)))))
+SymTable:
+varf(String) -> test.in
+Output:
+FileTable:
+test.in
+Heap:
+}
+
+4: ProgramState{
+Execution stack:
+int varc
+(readFile(varf, varc);(print(varc);(readFile(varf, varc);(print(varc);closeRFile(varf)))))
+SymTable:
+varf(String) -> test.in
+Output:
+FileTable:
+test.in
+Heap:
+}
+
+4: ProgramState{
+Execution stack:
+(readFile(varf, varc);(print(varc);(readFile(varf, varc);(print(varc);closeRFile(varf)))))
+SymTable:
+varf(String) -> test.in
+varc(int) -> 0
+Output:
+FileTable:
+test.in
+Heap:
+}
+
+4: ProgramState{
+Execution stack:
+(readFile(varf, varc);(print(varc);(readFile(varf, varc);(print(varc);closeRFile(varf)))))
+SymTable:
+varf(String) -> test.in
+varc(int) -> 0
+Output:
+FileTable:
+test.in
+Heap:
+}
+
+4: ProgramState{
+Execution stack:
+readFile(varf, varc)
+(print(varc);(readFile(varf, varc);(print(varc);closeRFile(varf))))
+SymTable:
+varf(String) -> test.in
+varc(int) -> 0
+Output:
+FileTable:
+test.in
+Heap:
+}
+
+4: ProgramState{
+Execution stack:
+readFile(varf, varc)
+(print(varc);(readFile(varf, varc);(print(varc);closeRFile(varf))))
+SymTable:
+varf(String) -> test.in
+varc(int) -> 0
+Output:
+FileTable:
+test.in
+Heap:
+}
+
+4: ProgramState{
+Execution stack:
+(print(varc);(readFile(varf, varc);(print(varc);closeRFile(varf))))
+SymTable:
+varf(String) -> test.in
+varc(int) -> 15
+Output:
+FileTable:
+test.in
+Heap:
+}
+
+4: ProgramState{
+Execution stack:
+(print(varc);(readFile(varf, varc);(print(varc);closeRFile(varf))))
+SymTable:
+varf(String) -> test.in
+varc(int) -> 15
+Output:
+FileTable:
+test.in
+Heap:
+}
+
+4: ProgramState{
+Execution stack:
+print(varc)
+(readFile(varf, varc);(print(varc);closeRFile(varf)))
+SymTable:
+varf(String) -> test.in
+varc(int) -> 15
+Output:
+FileTable:
+test.in
+Heap:
+}
+
+4: ProgramState{
+Execution stack:
+print(varc)
+(readFile(varf, varc);(print(varc);closeRFile(varf)))
+SymTable:
+varf(String) -> test.in
+varc(int) -> 15
+Output:
+FileTable:
+test.in
+Heap:
+}
+
+4: ProgramState{
+Execution stack:
+(readFile(varf, varc);(print(varc);closeRFile(varf)))
+SymTable:
+varf(String) -> test.in
+varc(int) -> 15
+Output:
+15
+FileTable:
+test.in
+Heap:
+}
+
+4: ProgramState{
+Execution stack:
+(readFile(varf, varc);(print(varc);closeRFile(varf)))
+SymTable:
+varf(String) -> test.in
+varc(int) -> 15
+Output:
+15
+FileTable:
+test.in
+Heap:
+}
+
+4: ProgramState{
+Execution stack:
+readFile(varf, varc)
+(print(varc);closeRFile(varf))
+SymTable:
+varf(String) -> test.in
+varc(int) -> 15
+Output:
+15
+FileTable:
+test.in
+Heap:
+}
+
+4: ProgramState{
+Execution stack:
+readFile(varf, varc)
+(print(varc);closeRFile(varf))
+SymTable:
+varf(String) -> test.in
+varc(int) -> 15
+Output:
+15
+FileTable:
+test.in
+Heap:
+}
+
+4: ProgramState{
+Execution stack:
+(print(varc);closeRFile(varf))
+SymTable:
+varf(String) -> test.in
+varc(int) -> 50
+Output:
+15
+FileTable:
+test.in
+Heap:
+}
+
+4: ProgramState{
+Execution stack:
+(print(varc);closeRFile(varf))
+SymTable:
+varf(String) -> test.in
+varc(int) -> 50
+Output:
+15
+FileTable:
+test.in
+Heap:
+}
+
+4: ProgramState{
+Execution stack:
+print(varc)
+closeRFile(varf)
+SymTable:
+varf(String) -> test.in
+varc(int) -> 50
+Output:
+15
+FileTable:
+test.in
+Heap:
+}
+
+4: ProgramState{
+Execution stack:
+print(varc)
+closeRFile(varf)
+SymTable:
+varf(String) -> test.in
+varc(int) -> 50
+Output:
+15
+FileTable:
+test.in
+Heap:
+}
+
+4: ProgramState{
+Execution stack:
+closeRFile(varf)
+SymTable:
+varf(String) -> test.in
+varc(int) -> 50
+Output:
+15
+50
+FileTable:
+test.in
+Heap:
+}
+
+4: ProgramState{
+Execution stack:
+closeRFile(varf)
+SymTable:
+varf(String) -> test.in
+varc(int) -> 50
+Output:
+15
+50
+FileTable:
+test.in
+Heap:
+}
+
+4: ProgramState{
+Execution stack:
+SymTable:
+varf(String) -> test.in
+varc(int) -> 50
+Output:
+15
+50
+FileTable:
+Heap:
+}
+

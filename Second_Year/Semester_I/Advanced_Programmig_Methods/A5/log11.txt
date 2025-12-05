@@ -1,0 +1,511 @@
+11: ProgramState{
+Execution stack:
+(int v;(Reference(int) a;(v = 10;(new(a, 22);(fork((writeHeap(a, 30);(v = 32;(print(v);print(ReadHeapExpression(a))))));(print(v);print(ReadHeapExpression(a))))))))
+SymTable:
+Output:
+FileTable:
+Heap:
+}
+
+11: ProgramState{
+Execution stack:
+int v
+(Reference(int) a;(v = 10;(new(a, 22);(fork((writeHeap(a, 30);(v = 32;(print(v);print(ReadHeapExpression(a))))));(print(v);print(ReadHeapExpression(a)))))))
+SymTable:
+Output:
+FileTable:
+Heap:
+}
+
+11: ProgramState{
+Execution stack:
+int v
+(Reference(int) a;(v = 10;(new(a, 22);(fork((writeHeap(a, 30);(v = 32;(print(v);print(ReadHeapExpression(a))))));(print(v);print(ReadHeapExpression(a)))))))
+SymTable:
+Output:
+FileTable:
+Heap:
+}
+
+11: ProgramState{
+Execution stack:
+(Reference(int) a;(v = 10;(new(a, 22);(fork((writeHeap(a, 30);(v = 32;(print(v);print(ReadHeapExpression(a))))));(print(v);print(ReadHeapExpression(a)))))))
+SymTable:
+v(int) -> 0
+Output:
+FileTable:
+Heap:
+}
+
+11: ProgramState{
+Execution stack:
+(Reference(int) a;(v = 10;(new(a, 22);(fork((writeHeap(a, 30);(v = 32;(print(v);print(ReadHeapExpression(a))))));(print(v);print(ReadHeapExpression(a)))))))
+SymTable:
+v(int) -> 0
+Output:
+FileTable:
+Heap:
+}
+
+11: ProgramState{
+Execution stack:
+Reference(int) a
+(v = 10;(new(a, 22);(fork((writeHeap(a, 30);(v = 32;(print(v);print(ReadHeapExpression(a))))));(print(v);print(ReadHeapExpression(a))))))
+SymTable:
+v(int) -> 0
+Output:
+FileTable:
+Heap:
+}
+
+11: ProgramState{
+Execution stack:
+Reference(int) a
+(v = 10;(new(a, 22);(fork((writeHeap(a, 30);(v = 32;(print(v);print(ReadHeapExpression(a))))));(print(v);print(ReadHeapExpression(a))))))
+SymTable:
+v(int) -> 0
+Output:
+FileTable:
+Heap:
+}
+
+11: ProgramState{
+Execution stack:
+(v = 10;(new(a, 22);(fork((writeHeap(a, 30);(v = 32;(print(v);print(ReadHeapExpression(a))))));(print(v);print(ReadHeapExpression(a))))))
+SymTable:
+a(Reference(int)) -> ReferenceValue(0, int)
+v(int) -> 0
+Output:
+FileTable:
+Heap:
+}
+
+11: ProgramState{
+Execution stack:
+(v = 10;(new(a, 22);(fork((writeHeap(a, 30);(v = 32;(print(v);print(ReadHeapExpression(a))))));(print(v);print(ReadHeapExpression(a))))))
+SymTable:
+a(Reference(int)) -> ReferenceValue(0, int)
+v(int) -> 0
+Output:
+FileTable:
+Heap:
+}
+
+11: ProgramState{
+Execution stack:
+v = 10
+(new(a, 22);(fork((writeHeap(a, 30);(v = 32;(print(v);print(ReadHeapExpression(a))))));(print(v);print(ReadHeapExpression(a)))))
+SymTable:
+a(Reference(int)) -> ReferenceValue(0, int)
+v(int) -> 0
+Output:
+FileTable:
+Heap:
+}
+
+11: ProgramState{
+Execution stack:
+v = 10
+(new(a, 22);(fork((writeHeap(a, 30);(v = 32;(print(v);print(ReadHeapExpression(a))))));(print(v);print(ReadHeapExpression(a)))))
+SymTable:
+a(Reference(int)) -> ReferenceValue(0, int)
+v(int) -> 0
+Output:
+FileTable:
+Heap:
+}
+
+11: ProgramState{
+Execution stack:
+(new(a, 22);(fork((writeHeap(a, 30);(v = 32;(print(v);print(ReadHeapExpression(a))))));(print(v);print(ReadHeapExpression(a)))))
+SymTable:
+a(Reference(int)) -> ReferenceValue(0, int)
+v(int) -> 10
+Output:
+FileTable:
+Heap:
+}
+
+11: ProgramState{
+Execution stack:
+(new(a, 22);(fork((writeHeap(a, 30);(v = 32;(print(v);print(ReadHeapExpression(a))))));(print(v);print(ReadHeapExpression(a)))))
+SymTable:
+a(Reference(int)) -> ReferenceValue(0, int)
+v(int) -> 10
+Output:
+FileTable:
+Heap:
+}
+
+11: ProgramState{
+Execution stack:
+new(a, 22)
+(fork((writeHeap(a, 30);(v = 32;(print(v);print(ReadHeapExpression(a))))));(print(v);print(ReadHeapExpression(a))))
+SymTable:
+a(Reference(int)) -> ReferenceValue(0, int)
+v(int) -> 10
+Output:
+FileTable:
+Heap:
+}
+
+11: ProgramState{
+Execution stack:
+new(a, 22)
+(fork((writeHeap(a, 30);(v = 32;(print(v);print(ReadHeapExpression(a))))));(print(v);print(ReadHeapExpression(a))))
+SymTable:
+a(Reference(int)) -> ReferenceValue(0, int)
+v(int) -> 10
+Output:
+FileTable:
+Heap:
+}
+
+11: ProgramState{
+Execution stack:
+(fork((writeHeap(a, 30);(v = 32;(print(v);print(ReadHeapExpression(a))))));(print(v);print(ReadHeapExpression(a))))
+SymTable:
+a(Reference(int)) -> ReferenceValue(1, int)
+v(int) -> 10
+Output:
+FileTable:
+Heap:
+1(int):-> 22
+}
+
+11: ProgramState{
+Execution stack:
+(fork((writeHeap(a, 30);(v = 32;(print(v);print(ReadHeapExpression(a))))));(print(v);print(ReadHeapExpression(a))))
+SymTable:
+a(Reference(int)) -> ReferenceValue(1, int)
+v(int) -> 10
+Output:
+FileTable:
+Heap:
+1(int):-> 22
+}
+
+11: ProgramState{
+Execution stack:
+fork((writeHeap(a, 30);(v = 32;(print(v);print(ReadHeapExpression(a))))))
+(print(v);print(ReadHeapExpression(a)))
+SymTable:
+a(Reference(int)) -> ReferenceValue(1, int)
+v(int) -> 10
+Output:
+FileTable:
+Heap:
+1(int):-> 22
+}
+
+11: ProgramState{
+Execution stack:
+fork((writeHeap(a, 30);(v = 32;(print(v);print(ReadHeapExpression(a))))))
+(print(v);print(ReadHeapExpression(a)))
+SymTable:
+a(Reference(int)) -> ReferenceValue(1, int)
+v(int) -> 10
+Output:
+FileTable:
+Heap:
+1(int):-> 22
+}
+
+11: ProgramState{
+Execution stack:
+(print(v);print(ReadHeapExpression(a)))
+SymTable:
+a(Reference(int)) -> ReferenceValue(1, int)
+v(int) -> 10
+Output:
+FileTable:
+Heap:
+1(int):-> 22
+}
+
+12: ProgramState{
+Execution stack:
+(writeHeap(a, 30);(v = 32;(print(v);print(ReadHeapExpression(a)))))
+SymTable:
+a(Reference(int)) -> ReferenceValue(1, int)
+v(int) -> 10
+Output:
+FileTable:
+Heap:
+1(int):-> 22
+}
+
+11: ProgramState{
+Execution stack:
+(print(v);print(ReadHeapExpression(a)))
+SymTable:
+a(Reference(int)) -> ReferenceValue(1, int)
+v(int) -> 10
+Output:
+FileTable:
+Heap:
+1(int):-> 22
+}
+
+12: ProgramState{
+Execution stack:
+(writeHeap(a, 30);(v = 32;(print(v);print(ReadHeapExpression(a)))))
+SymTable:
+a(Reference(int)) -> ReferenceValue(1, int)
+v(int) -> 10
+Output:
+FileTable:
+Heap:
+1(int):-> 22
+}
+
+11: ProgramState{
+Execution stack:
+print(v)
+print(ReadHeapExpression(a))
+SymTable:
+a(Reference(int)) -> ReferenceValue(1, int)
+v(int) -> 10
+Output:
+FileTable:
+Heap:
+1(int):-> 22
+}
+
+12: ProgramState{
+Execution stack:
+writeHeap(a, 30)
+(v = 32;(print(v);print(ReadHeapExpression(a))))
+SymTable:
+a(Reference(int)) -> ReferenceValue(1, int)
+v(int) -> 10
+Output:
+FileTable:
+Heap:
+1(int):-> 22
+}
+
+11: ProgramState{
+Execution stack:
+print(v)
+print(ReadHeapExpression(a))
+SymTable:
+a(Reference(int)) -> ReferenceValue(1, int)
+v(int) -> 10
+Output:
+FileTable:
+Heap:
+1(int):-> 22
+}
+
+12: ProgramState{
+Execution stack:
+writeHeap(a, 30)
+(v = 32;(print(v);print(ReadHeapExpression(a))))
+SymTable:
+a(Reference(int)) -> ReferenceValue(1, int)
+v(int) -> 10
+Output:
+FileTable:
+Heap:
+1(int):-> 22
+}
+
+11: ProgramState{
+Execution stack:
+print(ReadHeapExpression(a))
+SymTable:
+a(Reference(int)) -> ReferenceValue(1, int)
+v(int) -> 10
+Output:
+10
+FileTable:
+Heap:
+1(int):-> 30
+}
+
+12: ProgramState{
+Execution stack:
+(v = 32;(print(v);print(ReadHeapExpression(a))))
+SymTable:
+a(Reference(int)) -> ReferenceValue(1, int)
+v(int) -> 10
+Output:
+10
+FileTable:
+Heap:
+1(int):-> 30
+}
+
+11: ProgramState{
+Execution stack:
+print(ReadHeapExpression(a))
+SymTable:
+a(Reference(int)) -> ReferenceValue(1, int)
+v(int) -> 10
+Output:
+10
+FileTable:
+Heap:
+1(int):-> 30
+}
+
+12: ProgramState{
+Execution stack:
+(v = 32;(print(v);print(ReadHeapExpression(a))))
+SymTable:
+a(Reference(int)) -> ReferenceValue(1, int)
+v(int) -> 10
+Output:
+10
+FileTable:
+Heap:
+1(int):-> 30
+}
+
+11: ProgramState{
+Execution stack:
+SymTable:
+a(Reference(int)) -> ReferenceValue(1, int)
+v(int) -> 10
+Output:
+10
+30
+FileTable:
+Heap:
+1(int):-> 30
+}
+
+12: ProgramState{
+Execution stack:
+v = 32
+(print(v);print(ReadHeapExpression(a)))
+SymTable:
+a(Reference(int)) -> ReferenceValue(1, int)
+v(int) -> 10
+Output:
+10
+30
+FileTable:
+Heap:
+1(int):-> 30
+}
+
+12: ProgramState{
+Execution stack:
+v = 32
+(print(v);print(ReadHeapExpression(a)))
+SymTable:
+a(Reference(int)) -> ReferenceValue(1, int)
+v(int) -> 10
+Output:
+10
+30
+FileTable:
+Heap:
+1(int):-> 30
+}
+
+12: ProgramState{
+Execution stack:
+(print(v);print(ReadHeapExpression(a)))
+SymTable:
+a(Reference(int)) -> ReferenceValue(1, int)
+v(int) -> 32
+Output:
+10
+30
+FileTable:
+Heap:
+1(int):-> 30
+}
+
+12: ProgramState{
+Execution stack:
+(print(v);print(ReadHeapExpression(a)))
+SymTable:
+a(Reference(int)) -> ReferenceValue(1, int)
+v(int) -> 32
+Output:
+10
+30
+FileTable:
+Heap:
+1(int):-> 30
+}
+
+12: ProgramState{
+Execution stack:
+print(v)
+print(ReadHeapExpression(a))
+SymTable:
+a(Reference(int)) -> ReferenceValue(1, int)
+v(int) -> 32
+Output:
+10
+30
+FileTable:
+Heap:
+1(int):-> 30
+}
+
+12: ProgramState{
+Execution stack:
+print(v)
+print(ReadHeapExpression(a))
+SymTable:
+a(Reference(int)) -> ReferenceValue(1, int)
+v(int) -> 32
+Output:
+10
+30
+FileTable:
+Heap:
+1(int):-> 30
+}
+
+12: ProgramState{
+Execution stack:
+print(ReadHeapExpression(a))
+SymTable:
+a(Reference(int)) -> ReferenceValue(1, int)
+v(int) -> 32
+Output:
+10
+30
+32
+FileTable:
+Heap:
+1(int):-> 30
+}
+
+12: ProgramState{
+Execution stack:
+print(ReadHeapExpression(a))
+SymTable:
+a(Reference(int)) -> ReferenceValue(1, int)
+v(int) -> 32
+Output:
+10
+30
+32
+FileTable:
+Heap:
+1(int):-> 30
+}
+
+12: ProgramState{
+Execution stack:
+SymTable:
+a(Reference(int)) -> ReferenceValue(1, int)
+v(int) -> 32
+Output:
+10
+30
+32
+30
+FileTable:
+Heap:
+1(int):-> 30
+}
+
