@@ -165,7 +165,7 @@ public class View {
     }
 
     private static IStatement createExample10() {
-        // Ref int v;new(v,20);Ref int a; new(a, 40); new(v,30);print(rH(rH(a)))
+        // Ref int v;new(v,20);Ref int a; new(a, 40); new(v,30);print(rH(a))
         return new CompoundStatement(
                 new VariableDeclarationStatement("v", new ReferenceType(new IntType())),
                 new CompoundStatement(
