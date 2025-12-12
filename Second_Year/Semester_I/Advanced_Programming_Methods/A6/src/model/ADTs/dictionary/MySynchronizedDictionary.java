@@ -1,0 +1,83 @@
+package model.ADTs.dictionary;
+
+import exceptions.MyKeyNotFoundException;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
+public class MySynchronizedDictionary<K, V> implements IDictionary<K, V> {
+    private final Map<K, V> map = new ConcurrentHashMap<>();
+
+    @Override
+    public synchronized boolean isDefined(K key) {
+        return this.map.containsKey(key);
+    }
+
+    @Override
+    public synchronized void insert(K key, V value) {
+        this.map.put(key, value);
+    }
+
+    @Override
+    public synchronized void update(K key, V value) throws MyKeyNotFoundException {
+        if (!isDefined(key)) {
+            throw new MyKeyNotFoundException();
+        }
+        this.map.put(key, value);
+    }
+
+    @Override
+    public synchronized void remove(K key) throws MyKeyNotFoundException {
+        if (!isDefined(key)) {
+            throw new MyKeyNotFoundException();
+        }
+        this.map.remove(key);
+    }
+
+    @Override
+    public synchronized V getValueForKey(K key) throws MyKeyNotFoundException {
+        if (!isDefined(key)) {
+            throw new MyKeyNotFoundException();
+        }
+        return this.map.get(key);
+    }
+
+    @Override
+    public List<K> getAllKeys() {
+        return new ArrayList<>(this.map.keySet());
+    }
+
+    @Override
+    public List<V> getAllValues() {
+        return new ArrayList<>(this.map.values());
+    }
+
+    @Override
+    public Map<K, V> getMap() {
+        return Map.copyOf(this.map);
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return this.map.isEmpty();
+    }
+
+    @Override
+    public int size() {
+        return this.map.size();
+    }
+
+    @Override
+    public IDictionary<K, V> deepcopy() {
+        var clone = new MySynchronizedDictionary<K, V>();
+        clone.map.putAll(this.map);
+        return clone;
+    }
+
+    @Override
+    public String toString() {
+        return this.map.toString();
+    }
+}

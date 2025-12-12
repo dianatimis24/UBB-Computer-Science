@@ -1,0 +1,69 @@
+package model.statement;
+
+import exceptions.MyInvalidTypeException;
+import model.ADTs.dictionary.IDictionary;
+import exceptions.MyKeyNotFoundException;
+import exceptions.ExpressionException;
+import exceptions.MyException;
+import model.expression.IExpression;
+import model.state.ProgramState;
+import model.state.symbolTable.ISymbolTable;
+import model.type.Type;
+import model.value.Value;
+
+public class AssignmentStatement implements IStatement {
+    private final String variableName;
+    private final IExpression expression;
+
+    public AssignmentStatement(String variableName, IExpression expression) {
+        this.variableName = variableName;
+        this.expression = expression;
+    }
+
+    @Override
+    public ProgramState execute(ProgramState state) throws MyException {
+        ISymbolTable symbolTable = state.getSymbolTable();
+        if (!symbolTable.isDefined(this.variableName)) {
+            throw new MyException("The variable " + this.variableName + " was not declared before.");
+        }
+
+        Value value;
+        try {
+            value = this.expression.evaluate(symbolTable, state.getHeap());
+        } catch (MyException e) {
+            throw new MyException(e.getMessage());
+        }
+        try {
+            if (value.getType().equals(symbolTable.getValueForKey(this.variableName).getType()))
+                symbolTable.update(this.variableName, value);
+            else {
+                throw new MyException("The declared type of the variable " + this.variableName + " and the type of the expression are different.");
+            }
+        } catch (MyKeyNotFoundException e) {
+            throw new MyException(e.getMessage());
+        } catch (MyException e) {
+            throw new MyException(e.getMessage());
+        }
+        return null;
+    }
+
+    @Override
+    public IDictionary<String, Type> typecheck(IDictionary<String, Type> typeEnvironment) throws MyException {
+        Type variableType = typeEnvironment.getValueForKey(this.variableName);
+        Type expressionType = this.expression.typecheck(typeEnvironment);
+        if (!variableType.equals(expressionType)) {
+            throw new MyInvalidTypeException("The right hand side and the left hand side of the expression have different types.");
+        }
+        return typeEnvironment;
+    }
+
+    @Override
+    public IStatement deepCopy() {
+        return new AssignmentStatement(this.variableName, this.expression.deepCopy());
+    }
+
+    @Override
+    public String toString() {
+        return this.variableName + " = " + this.expression.toString();
+    }
+}
