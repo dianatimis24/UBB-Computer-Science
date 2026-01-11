@@ -1,0 +1,263 @@
+1: ProgramState{
+Execution stack:
+(Reference(int) v;(new(v, 20);(Reference(Reference(int)) a;(new(a, v);(print(ReadHeapExpression(v));print(ReadHeapExpression(ReadHeapExpression(a)) + 5))))))
+SymTable:
+Output:
+FileTable:
+Heap:
+}
+
+1: ProgramState{
+Execution stack:
+Reference(int) v
+(new(v, 20);(Reference(Reference(int)) a;(new(a, v);(print(ReadHeapExpression(v));print(ReadHeapExpression(ReadHeapExpression(a)) + 5)))))
+SymTable:
+Output:
+FileTable:
+Heap:
+}
+
+1: ProgramState{
+Execution stack:
+Reference(int) v
+(new(v, 20);(Reference(Reference(int)) a;(new(a, v);(print(ReadHeapExpression(v));print(ReadHeapExpression(ReadHeapExpression(a)) + 5)))))
+SymTable:
+Output:
+FileTable:
+Heap:
+}
+
+1: ProgramState{
+Execution stack:
+(new(v, 20);(Reference(Reference(int)) a;(new(a, v);(print(ReadHeapExpression(v));print(ReadHeapExpression(ReadHeapExpression(a)) + 5)))))
+SymTable:
+v(Reference(int)) -> ReferenceValue(0, int)
+Output:
+FileTable:
+Heap:
+}
+
+1: ProgramState{
+Execution stack:
+(new(v, 20);(Reference(Reference(int)) a;(new(a, v);(print(ReadHeapExpression(v));print(ReadHeapExpression(ReadHeapExpression(a)) + 5)))))
+SymTable:
+v(Reference(int)) -> ReferenceValue(0, int)
+Output:
+FileTable:
+Heap:
+}
+
+1: ProgramState{
+Execution stack:
+new(v, 20)
+(Reference(Reference(int)) a;(new(a, v);(print(ReadHeapExpression(v));print(ReadHeapExpression(ReadHeapExpression(a)) + 5))))
+SymTable:
+v(Reference(int)) -> ReferenceValue(0, int)
+Output:
+FileTable:
+Heap:
+}
+
+1: ProgramState{
+Execution stack:
+new(v, 20)
+(Reference(Reference(int)) a;(new(a, v);(print(ReadHeapExpression(v));print(ReadHeapExpression(ReadHeapExpression(a)) + 5))))
+SymTable:
+v(Reference(int)) -> ReferenceValue(0, int)
+Output:
+FileTable:
+Heap:
+}
+
+1: ProgramState{
+Execution stack:
+(Reference(Reference(int)) a;(new(a, v);(print(ReadHeapExpression(v));print(ReadHeapExpression(ReadHeapExpression(a)) + 5))))
+SymTable:
+v(Reference(int)) -> ReferenceValue(1, int)
+Output:
+FileTable:
+Heap:
+1(int):-> 20
+}
+
+1: ProgramState{
+Execution stack:
+(Reference(Reference(int)) a;(new(a, v);(print(ReadHeapExpression(v));print(ReadHeapExpression(ReadHeapExpression(a)) + 5))))
+SymTable:
+v(Reference(int)) -> ReferenceValue(1, int)
+Output:
+FileTable:
+Heap:
+1(int):-> 20
+}
+
+1: ProgramState{
+Execution stack:
+Reference(Reference(int)) a
+(new(a, v);(print(ReadHeapExpression(v));print(ReadHeapExpression(ReadHeapExpression(a)) + 5)))
+SymTable:
+v(Reference(int)) -> ReferenceValue(1, int)
+Output:
+FileTable:
+Heap:
+1(int):-> 20
+}
+
+1: ProgramState{
+Execution stack:
+Reference(Reference(int)) a
+(new(a, v);(print(ReadHeapExpression(v));print(ReadHeapExpression(ReadHeapExpression(a)) + 5)))
+SymTable:
+v(Reference(int)) -> ReferenceValue(1, int)
+Output:
+FileTable:
+Heap:
+1(int):-> 20
+}
+
+1: ProgramState{
+Execution stack:
+(new(a, v);(print(ReadHeapExpression(v));print(ReadHeapExpression(ReadHeapExpression(a)) + 5)))
+SymTable:
+a(Reference(Reference(int))) -> ReferenceValue(0, Reference(int))
+v(Reference(int)) -> ReferenceValue(1, int)
+Output:
+FileTable:
+Heap:
+1(int):-> 20
+}
+
+1: ProgramState{
+Execution stack:
+(new(a, v);(print(ReadHeapExpression(v));print(ReadHeapExpression(ReadHeapExpression(a)) + 5)))
+SymTable:
+a(Reference(Reference(int))) -> ReferenceValue(0, Reference(int))
+v(Reference(int)) -> ReferenceValue(1, int)
+Output:
+FileTable:
+Heap:
+1(int):-> 20
+}
+
+1: ProgramState{
+Execution stack:
+new(a, v)
+(print(ReadHeapExpression(v));print(ReadHeapExpression(ReadHeapExpression(a)) + 5))
+SymTable:
+a(Reference(Reference(int))) -> ReferenceValue(0, Reference(int))
+v(Reference(int)) -> ReferenceValue(1, int)
+Output:
+FileTable:
+Heap:
+1(int):-> 20
+}
+
+1: ProgramState{
+Execution stack:
+new(a, v)
+(print(ReadHeapExpression(v));print(ReadHeapExpression(ReadHeapExpression(a)) + 5))
+SymTable:
+a(Reference(Reference(int))) -> ReferenceValue(0, Reference(int))
+v(Reference(int)) -> ReferenceValue(1, int)
+Output:
+FileTable:
+Heap:
+1(int):-> 20
+}
+
+1: ProgramState{
+Execution stack:
+(print(ReadHeapExpression(v));print(ReadHeapExpression(ReadHeapExpression(a)) + 5))
+SymTable:
+a(Reference(Reference(int))) -> ReferenceValue(2, Reference(int))
+v(Reference(int)) -> ReferenceValue(1, int)
+Output:
+FileTable:
+Heap:
+1(int):-> 20
+2(Reference(int)):-> ReferenceValue(1, int)
+}
+
+1: ProgramState{
+Execution stack:
+(print(ReadHeapExpression(v));print(ReadHeapExpression(ReadHeapExpression(a)) + 5))
+SymTable:
+a(Reference(Reference(int))) -> ReferenceValue(2, Reference(int))
+v(Reference(int)) -> ReferenceValue(1, int)
+Output:
+FileTable:
+Heap:
+1(int):-> 20
+2(Reference(int)):-> ReferenceValue(1, int)
+}
+
+1: ProgramState{
+Execution stack:
+print(ReadHeapExpression(v))
+print(ReadHeapExpression(ReadHeapExpression(a)) + 5)
+SymTable:
+a(Reference(Reference(int))) -> ReferenceValue(2, Reference(int))
+v(Reference(int)) -> ReferenceValue(1, int)
+Output:
+FileTable:
+Heap:
+1(int):-> 20
+2(Reference(int)):-> ReferenceValue(1, int)
+}
+
+1: ProgramState{
+Execution stack:
+print(ReadHeapExpression(v))
+print(ReadHeapExpression(ReadHeapExpression(a)) + 5)
+SymTable:
+a(Reference(Reference(int))) -> ReferenceValue(2, Reference(int))
+v(Reference(int)) -> ReferenceValue(1, int)
+Output:
+FileTable:
+Heap:
+1(int):-> 20
+2(Reference(int)):-> ReferenceValue(1, int)
+}
+
+1: ProgramState{
+Execution stack:
+print(ReadHeapExpression(ReadHeapExpression(a)) + 5)
+SymTable:
+a(Reference(Reference(int))) -> ReferenceValue(2, Reference(int))
+v(Reference(int)) -> ReferenceValue(1, int)
+Output:
+20
+FileTable:
+Heap:
+1(int):-> 20
+2(Reference(int)):-> ReferenceValue(1, int)
+}
+
+1: ProgramState{
+Execution stack:
+print(ReadHeapExpression(ReadHeapExpression(a)) + 5)
+SymTable:
+a(Reference(Reference(int))) -> ReferenceValue(2, Reference(int))
+v(Reference(int)) -> ReferenceValue(1, int)
+Output:
+20
+FileTable:
+Heap:
+1(int):-> 20
+2(Reference(int)):-> ReferenceValue(1, int)
+}
+
+1: ProgramState{
+Execution stack:
+SymTable:
+a(Reference(Reference(int))) -> ReferenceValue(2, Reference(int))
+v(Reference(int)) -> ReferenceValue(1, int)
+Output:
+20
+25
+FileTable:
+Heap:
+1(int):-> 20
+2(Reference(int)):-> ReferenceValue(1, int)
+}
+
