@@ -28,8 +28,8 @@ public class FileTable implements IFileTable {
     }
 
     @Override
-    public List<BufferedReader> getFiles() {
-        return new ArrayList<>(this.files.getAllValues());
+    public List<String> getFiles() {
+        return new ArrayList<>(this.files.getAllKeys());
     }
 
     @Override

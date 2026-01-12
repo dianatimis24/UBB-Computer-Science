@@ -9,7 +9,7 @@ public interface IFileTable {
     boolean isDefined(String filename);
     void insert(String filename, BufferedReader reader);
     BufferedReader getFile(String filename) throws MyKeyNotFoundException;
-    List<BufferedReader> getFiles();
+    List<String> getFiles();
     void remove(String filename) throws MyKeyNotFoundException;
     String toString();
 }
