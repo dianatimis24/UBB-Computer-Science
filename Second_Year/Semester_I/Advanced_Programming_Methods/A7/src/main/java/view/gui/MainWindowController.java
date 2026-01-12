@@ -87,7 +87,7 @@ public class MainWindowController {
         this.programStateIdentifiersListView.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> {
                     if (newValue != null) {
-                        selectedProgram = controller.getRepository().getProgramStates().stream()
+                        this.selectedProgram = this.controller.getRepository().getProgramStates().stream()
                                 .filter(p -> p.getId() == newValue)
                                 .findFirst()
                                 .orElse(null);
