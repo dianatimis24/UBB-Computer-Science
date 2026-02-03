@@ -1,0 +1,14 @@
+Lab 3. Problem 3. - TCP, UDP, reuse socket
+Implement a UDP-based real-time collaborative whiteboard application where multiple clients can draw on a shared canvas.
+The server manages the canvas state and broadcasts updates to all clients. Use drawing primitives of type line, circle,
+ellipse, rectangles with contour colors and eventually fill.
+
+CLIENT              --udp-->        SERVER
+line start, end                     parse
+circle px, py, r                    draw
+                                    save image
+
+keep a list of clients
+new update --> send to all clients the image / commands (new thread)
+
+draw image with turtle

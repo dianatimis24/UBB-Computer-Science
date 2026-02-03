@@ -1,0 +1,12 @@
+Inventory database. - TCP, UDP, reuse
+Create a database of parts for an automobile that includes part number, part name, part price,
+part quantity, account number of user, and a part description. Write procedures on the server that search for
+a part, obtain a part name from a part number, give the quantity of parts available, order a part,
+and obtain a list of subpart numbers
+Create a set of commands on the client that the server can interpret in order answer client inquiries.
+
+Commands:
+search <part number>
+get <part number>
+order <part number> <quantity>
+exit

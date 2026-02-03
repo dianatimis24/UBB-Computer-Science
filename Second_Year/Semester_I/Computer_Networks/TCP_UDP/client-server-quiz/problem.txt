@@ -1,0 +1,8 @@
+Clients connect to the server. - TCP, UDP, reuse socket, timeout on socket
+Server starts quiz if no more clients connect in 10 seconds.
+Server sends a string of questions to each client then waits until all clients
+give their answers (answer: <index of question> <answer to question>).
+Clients receive their score from server, then server disconnects them and starts another quiz round.
+
+client connection to server, sending question + receiving answers: TCP
+timer broadcasting: UDP
