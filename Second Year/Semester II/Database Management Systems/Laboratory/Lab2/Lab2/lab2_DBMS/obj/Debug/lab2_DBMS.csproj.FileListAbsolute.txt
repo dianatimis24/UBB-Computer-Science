@@ -1,0 +1,11 @@
+C:\Users\timis\source\repos\lab2_DBMS\lab2_DBMS\bin\Debug\lab2_DBMS.exe.config
+C:\Users\timis\source\repos\lab2_DBMS\lab2_DBMS\bin\Debug\lab2_DBMS.exe
+C:\Users\timis\source\repos\lab2_DBMS\lab2_DBMS\bin\Debug\lab2_DBMS.pdb
+C:\Users\timis\source\repos\lab2_DBMS\lab2_DBMS\obj\Debug\lab2_DBMS.csproj.AssemblyReference.cache
+C:\Users\timis\source\repos\lab2_DBMS\lab2_DBMS\obj\Debug\lab2_DBMS.Form1.resources
+C:\Users\timis\source\repos\lab2_DBMS\lab2_DBMS\obj\Debug\lab2_DBMS.Properties.Resources.resources
+C:\Users\timis\source\repos\lab2_DBMS\lab2_DBMS\obj\Debug\lab2_DBMS.csproj.GenerateResource.cache
+C:\Users\timis\source\repos\lab2_DBMS\lab2_DBMS\obj\Debug\lab2_DBMS.csproj.CoreCompileInputs.cache
+C:\Users\timis\source\repos\lab2_DBMS\lab2_DBMS\obj\Debug\lab2_DBMS.exe
+C:\Users\timis\source\repos\lab2_DBMS\lab2_DBMS\obj\Debug\lab2_DBMS.pdb
+C:\Users\timis\source\repos\lab2_DBMS\lab2_DBMS\obj\Debug\lab2_DBMS.exe.config
