@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main class="gallery">
+
+        <h1 class="gallery__title">Hover to explore some photos from my holiday in Vienna</h1>
+        <div class="gallery__thumbnails">
+
+            <div class="gallery__item" data-full="images/viena1.jpg">
+                <img class="gallery__thumb" src="images/viena1.jpg" alt="Gloriette" />
+                <span class="gallery__label">Gloriette</span>
+            </div>
+
+            <div class="gallery__item" data-full="images/viena2.jpg">
+                <img class="gallery__thumb" src="images/viena2.jpg" alt="Stephansdom" />
+                <span class="gallery__label">Stephansdom</span>
+            </div>
+
+            <div class="gallery__item" data-full="images/viena3.jpg">
+                <img class="gallery__thumb" src="images/viena3.jpg" alt="Kunsthistorisches Museum" />
+                <span class="gallery__label">Kunsthistorisches Museum</span>
+            </div>
+
+            <div class="gallery__item" data-full="images/viena4.jpg">
+                <img class="gallery__thumb" src="images/viena4.jpg" alt="Schönbrunn" />
+                <span class="gallery__label">Schönbrunn</span>
+            </div>
+
+            <div class="gallery__item" data-full="images/viena5.jpg">
+                <img class="gallery__thumb" src="images/viena5.jpg" alt="Votivkirche" />
+                <span class="gallery__label">Votivkirche</span>
+            </div>
+
+            <div class="gallery__item" data-full="images/viena6.jpg">
+                <img class="gallery__thumb" src="images/viena6.jpg" alt="Hundertwasserhaus" />
+                <span class="gallery__label">Hundertwasserhaus</span>
+            </div>
+
+            <div class="gallery__item" data-full="images/viena7.jpg">
+                <img class="gallery__thumb" src="images/viena7.jpg" alt="Hofburg" />
+                <span class="gallery__label">Hofburg</span>
+            </div>
+
+            <div class="gallery__item" data-full="images/viena8.jpg">
+                <img class="gallery__thumb" src="images/viena8.jpg" alt="Staatoper" />
+                <span class="gallery__label">Staatoper</span>
+            </div>
+
+        </div>
+
+        <div class="gallery__preview" id="preview">
+            <p class="gallery__hint">Hover a thumbnail above to see the photo.</p>
+            <img class="gallery__full" id="fullImage" src="" alt="" />
+        </div>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

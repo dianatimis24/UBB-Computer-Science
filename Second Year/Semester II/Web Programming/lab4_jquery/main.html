@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sortable &amp; Swappable Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <table class="table">
+        <thead class="table__head">
+            <tr class="table__row">
+                <th class="table__cell table__cell--header" data-col="0">First Name</th>
+                <th class="table__cell table__cell--header" data-col="1">Last Name</th>
+                <th class="table__cell table__cell--header" data-col="2">Group</th>
+                <th class="table__cell table__cell--header" data-col="3">Grade</th>
+            </tr>
+        </thead>
+
+        <tbody class="table__body">
+            <tr class="table__row">
+                <td class="table__cell">Diana</td>
+                <td class="table__cell">Timis</td>
+                <td class="table__cell">927</td>
+                <td class="table__cell">9.80</td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__cell">Mihai</td>
+                <td class="table__cell">Tira</td>
+                <td class="table__cell">927</td>
+                <td class="table__cell">9.60</td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__cell">Ana</td>
+                <td class="table__cell">Pop</td>
+                <td class="table__cell">926</td>
+                <td class="table__cell">9.20</td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__cell">Mihai</td>
+                <td class="table__cell">Ratiu</td>
+                <td class="table__cell">926</td>
+                <td class="table__cell">9.80</td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__cell">Alexandra</td>
+                <td class="table__cell">Balatici</td>
+                <td class="table__cell">921</td>
+                <td class="table__cell">9.45</td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__cell">Iulia</td>
+                <td class="table__cell">Farcas</td>
+                <td class="table__cell">923</td>
+                <td class="table__cell">9.50</td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__cell">Patricia</td>
+                <td class="table__cell">Manciu</td>
+                <td class="table__cell">925</td>
+                <td class="table__cell">9.40</td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__cell">Luca</td>
+                <td class="table__cell">Lup</td>
+                <td class="table__cell">924</td>
+                <td class="table__cell">9.00</td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__cell">Andreea</td>
+                <td class="table__cell">Buruiana</td>
+                <td class="table__cell">922</td>
+                <td class="table__cell">8.80</td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__cell">Matei</td>
+                <td class="table__cell">Jira</td>
+                <td class="table__cell">924</td>
+                <td class="table__cell">9.00</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="table__foot">
+            <tr class="table__row">
+                <td class="table__cell table__cell--footer" data-col="0">Swap with the column on the right</td>
+                <td class="table__cell table__cell--footer" data-col="1">Swap with the column on the right</td>
+                <td class="table__cell table__cell--footer" data-col="2">Swap with the column on the right</td>
+                <td class="table__cell table__cell--footer" data-col="3">Swap with the column on the right</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
