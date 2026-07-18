@@ -1,0 +1,139 @@
+<div class="page-wrapper">
+    <h3 class="page-title">All Rooms</h3>
+
+    <div class="filter-bar">
+        <div class="filter-bar__group">
+            <label class="filter-bar__label">Category:</label>
+            <input class="filter-bar__input" type="text" [ngModel]="filterCategory()"
+                (ngModelChange)="onFilterCategoryChange($event)" placeholder="e.g. deluxe" />
+        </div>
+        <div class="filter-bar__group">
+            <label class="filter-bar__label">Type:</label>
+            <input class="filter-bar__input" type="text" [ngModel]="filterType()"
+                (ngModelChange)="onFilterTypeChange($event)" placeholder="e.g. double" />
+        </div>
+        <div class="filter-bar__group">
+            <label class="filter-bar__label">Max price (€):</label>
+            <input class="filter-bar__input" type="text" [ngModel]="filterPrice()"
+                (ngModelChange)="onFilterPriceChange($event)" placeholder="e.g. 150" />
+        </div>
+        <div class="filter-bar__group">
+            <label class="filter-bar__label">Hotel name:</label>
+            <input class="filter-bar__input" type="text" [ngModel]="filterHotel()"
+                (ngModelChange)="onFilterHotelChange($event)" placeholder="e.g. Grand Hotel" />
+        </div>
+    </div>
+
+    <table class="data-table">
+        <thead class="data-table__head">
+            <tr>
+                <th class="data-table__head-cell">Select</th>
+                <th class="data-table__head-cell">Hotel</th>
+                <th class="data-table__head-cell">Room #</th>
+                <th class="data-table__head-cell">Category</th>
+                <th class="data-table__head-cell">Type</th>
+                <th class="data-table__head-cell">Price (€)</th>
+                @if (isLoggedIn) {
+                <th class="data-table__head-cell">Edit</th>
+                <th class="data-table__head-cell">Delete</th>
+                }
+            </tr>
+        </thead>
+        <tbody>
+            @for (room of pagedRooms(); track room.id) {
+            <tr class="data-table__row">
+                <td class="data-table__cell">
+                    <input type="checkbox" [checked]="isSelected(room.id)" (change)="toggleSelection(room.id)" />
+                </td>
+                <td class="data-table__cell">{{ room.hotel_name }}</td>
+                <td class="data-table__cell">{{ room.room_number }}</td>
+                <td class="data-table__cell">{{ room.category }}</td>
+                <td class="data-table__cell">{{ room.type }}</td>
+                <td class="data-table__cell">{{ room.price }}</td>
+                @if (isLoggedIn) {
+                <td class="data-table__cell">
+                    <button class="button button--primary" (click)="openEditModal(room)">Edit</button>
+                </td>
+                <td class="data-table__cell">
+                    <button class="button button--danger" (click)="deleteRoom(room)">Delete</button>
+                </td>
+                }
+            </tr>
+            }
+            @if (rooms().length === 0) {
+            <tr class="data-table__row">
+                <td class="data-table__cell" colspan="8">No rooms found.</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+    <div class="pagination">
+        <button class="button button--primary" (click)="prevPage()" [disabled]="currentPage() === 0">
+            Previous
+        </button>
+        <span class="pagination__info">Page {{ currentPage() + 1 }} of {{ totalPages() || 1 }}</span>
+        <button class="button button--primary" (click)="nextPage()" [disabled]="currentPage() >= totalPages() - 1">
+            Next
+        </button>
+    </div>
+
+    <div class="booking-panel">
+        <h4 class="booking-panel__title">Book Selected Rooms</h4>
+        <p class="booking-panel__hint">Tick one or more rooms above, pick your dates, then click Book.</p>
+        <div class="booking-panel__form">
+            <div class="filter-bar__group">
+                <label class="filter-bar__label">Start Date:</label>
+                <input class="filter-bar__input" type="date" [ngModel]="bookStartDate()"
+                    (ngModelChange)="bookStartDate.set($event)" />
+            </div>
+            <div class="filter-bar__group">
+                <label class="filter-bar__label">End Date:</label>
+                <input class="filter-bar__input" type="date" [ngModel]="bookEndDate()"
+                    (ngModelChange)="bookEndDate.set($event)" />
+            </div>
+            <div class="filter-bar__group" style="align-self: flex-end;">
+                <button class="button button--primary" (click)="bookSelected()">Book Selected</button>
+            </div>
+        </div>
+        @if (bookingResult()) {
+        <p class="booking-panel__result" [class.booking-panel__result--success]="bookingResultType() === 'success'"
+            [class.booking-panel__result--error]="bookingResultType() === 'error'"
+            [class.booking-panel__result--warning]="bookingResultType() === 'warning'">
+            {{ bookingResult() }}
+        </p>
+        }
+    </div>
+</div>
+
+@if (showModal()) {
+<div class="modal" (click)="closeModal()">
+    <div class="modal__box" (click)="$event.stopPropagation()">
+        <h3 class="modal__title">Edit Room</h3>
+        <div class="form-group">
+            <label class="form-group__label">Room Number:</label>
+            <input class="form-group__input" type="text" [ngModel]="modalRoomNumber()"
+                (ngModelChange)="modalRoomNumber.set($event)" />
+        </div>
+        <div class="form-group">
+            <label class="form-group__label">Category:</label>
+            <input class="form-group__input" type="text" [ngModel]="modalCategory()"
+                (ngModelChange)="modalCategory.set($event)" />
+        </div>
+        <div class="form-group">
+            <label class="form-group__label">Type:</label>
+            <input class="form-group__input" type="text" [ngModel]="modalType()"
+                (ngModelChange)="modalType.set($event)" />
+        </div>
+        <div class="form-group">
+            <label class="form-group__label">Price (€):</label>
+            <input class="form-group__input" type="text" [ngModel]="modalPrice()"
+                (ngModelChange)="modalPrice.set($event)" />
+        </div>
+        <div class="modal__actions">
+            <button class="button button--primary" (click)="saveRoom()">Save</button>
+            <button class="button button--secondary" (click)="closeModal()">Cancel</button>
+        </div>
+    </div>
+</div>
+}

@@ -1,0 +1,69 @@
+<div class="page-wrapper">
+    <h3 class="page-title">My Reservations</h3>
+
+    <table class="data-table">
+        <thead class="data-table__head">
+            <tr>
+                <th class="data-table__head-cell">Hotel</th>
+                <th class="data-table__head-cell">Room #</th>
+                <th class="data-table__head-cell">Start Date</th>
+                <th class="data-table__head-cell">End Date</th>
+                <th class="data-table__head-cell">Edit</th>
+                <th class="data-table__head-cell">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (res of pagedReservations(); track res.id) {
+            <tr class="data-table__row">
+                <td class="data-table__cell">{{ res.hotel_name }}</td>
+                <td class="data-table__cell">{{ res.room_number }}</td>
+                <td class="data-table__cell">{{ res.start_date }}</td>
+                <td class="data-table__cell">{{ res.end_date }}</td>
+                <td class="data-table__cell">
+                    <button class="button button--primary" (click)="openEditModal(res)">Edit</button>
+                </td>
+                <td class="data-table__cell">
+                    <button class="button button--danger" (click)="deleteReservation(res)">Delete</button>
+                </td>
+            </tr>
+            }
+            @if (reservations().length === 0) {
+            <tr class="data-table__row">
+                <td class="data-table__cell" colspan="6">No reservations found.</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+    <div class="pagination">
+        <button class="button button--primary" (click)="prevPage()" [disabled]="currentPage() === 0">
+            Previous
+        </button>
+        <span class="pagination__info">Page {{ currentPage() + 1 }} of {{ totalPages() || 1 }}</span>
+        <button class="button button--primary" (click)="nextPage()" [disabled]="currentPage() >= totalPages() - 1">
+            Next
+        </button>
+    </div>
+</div>
+
+@if (showModal()) {
+<div class="modal" (click)="closeModal()">
+    <div class="modal__box" (click)="$event.stopPropagation()">
+        <h3 class="modal__title">Edit Reservation</h3>
+        <div class="form-group">
+            <label class="form-group__label">Start Date:</label>
+            <input class="form-group__input" type="date" [ngModel]="modalStartDate()"
+                (ngModelChange)="modalStartDate.set($event)" />
+        </div>
+        <div class="form-group">
+            <label class="form-group__label">End Date:</label>
+            <input class="form-group__input" type="date" [ngModel]="modalEndDate()"
+                (ngModelChange)="modalEndDate.set($event)" />
+        </div>
+        <div class="modal__actions">
+            <button class="button button--primary" (click)="saveReservation()">Save</button>
+            <button class="button button--secondary" (click)="closeModal()">Cancel</button>
+        </div>
+    </div>
+</div>
+}

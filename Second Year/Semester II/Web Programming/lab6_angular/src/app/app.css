@@ -1,0 +1,152 @@
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1c1c1c;
+    padding: 0 2rem;
+    height: 60px;
+    gap: 1rem;
+    position: relative;
+}
+
+.nav-bar__brand {
+    color: #5cb85c;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.nav-bar__toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.4rem;
+    z-index: 100;
+}
+
+.nav-bar__toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 2px;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.nav-bar__toggle--open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.nav-bar__toggle--open span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-bar__toggle--open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav-bar__collapse {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.nav-bar__links {
+    display: flex;
+    gap: 0.5rem;
+    flex: 1;
+    justify-content: center;
+}
+
+.nav-bar__link {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+.nav-bar__link:hover,
+.nav-bar__link--active {
+    color: #5cb85c;
+    background-color: rgba(255, 255, 255, 0.07);
+}
+
+.nav-bar__user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    white-space: nowrap;
+}
+
+.nav-bar__username {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.9rem;
+}
+
+.nav-bar__logout {
+    color: #d9534f;
+    text-decoration: none;
+    font-size: 0.85rem;
+    padding: 0.3rem 0.7rem;
+    border: 1px solid #d9534f;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-bar__logout:hover {
+    background-color: #d9534f;
+    color: #fff;
+}
+
+@media (max-width: 640px) {
+    .nav-bar {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 0.75rem 1rem;
+    }
+
+    .nav-bar__toggle {
+        display: flex;
+    }
+
+    .nav-bar__collapse {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding: 0.75rem 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-bar__collapse--open {
+        display: flex;
+    }
+
+    .nav-bar__links {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.25rem;
+    }
+
+    .nav-bar__link {
+        width: 100%;
+        padding: 0.6rem 0.8rem;
+    }
+
+    .nav-bar__user {
+        width: 100%;
+        justify-content: space-between;
+        padding-top: 0.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}

@@ -1,0 +1,23 @@
+<div class="dashboard">
+    <div class="dashboard__header">
+        <h1 class="dashboard__title">Welcome, <span class="dashboard__name">{{ username() }}</span>!</h1>
+        <p class="dashboard__subtitle">What would you like to see today?</p>
+    </div>
+
+    <div class="dashboard__cards">
+        <a class="dashboard__card" routerLink="/hotels">
+            <h2 class="dashboard__card-title">Hotels</h2>
+            <p class="dashboard__card-description">Browse, add, edit and delete hotels</p>
+        </a>
+
+        <a class="dashboard__card" routerLink="/rooms">
+            <h2 class="dashboard__card-title">Rooms</h2>
+            <p class="dashboard__card-description">Browse rooms, filter by category, type, price or hotel, and book</p>
+        </a>
+
+        <a class="dashboard__card" routerLink="/reservations">
+            <h2 class="dashboard__card-title">My Reservations</h2>
+            <p class="dashboard__card-description">View, edit and cancel your reservations</p>
+        </a>
+    </div>
+</div>

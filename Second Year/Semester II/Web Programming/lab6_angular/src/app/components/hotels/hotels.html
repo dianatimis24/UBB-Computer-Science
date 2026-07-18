@@ -1,0 +1,75 @@
+<div class="page-wrapper">
+    <h3 class="page-title">All Hotels</h3>
+
+    <div class="filter-bar">
+        <div class="filter-bar__group">
+            <label class="filter-bar__label">Name:</label>
+            <input class="filter-bar__input" type="text" [ngModel]="filterName()"
+                (ngModelChange)="onFilterNameChange($event)" placeholder="Search by name" />
+        </div>
+        <div class="filter-bar__group">
+            <label class="filter-bar__label">Address:</label>
+            <input class="filter-bar__input" type="text" [ngModel]="filterAddress()"
+                (ngModelChange)="onFilterAddressChange($event)" placeholder="Search by address" />
+        </div>
+        <div class="filter-bar__group">
+            <button class="button button--primary" (click)="openAddModal()">+ Add Hotel</button>
+        </div>
+    </div>
+
+    <table class="data-table">
+        <thead class="data-table__head">
+            <tr>
+                <th class="data-table__head-cell">Name</th>
+                <th class="data-table__head-cell">Address</th>
+                <th class="data-table__head-cell">Add Room</th>
+                <th class="data-table__head-cell">Edit</th>
+                <th class="data-table__head-cell">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (hotel of hotels(); track hotel.id) {
+            <tr class="data-table__row">
+                <td class="data-table__cell">{{ hotel.name }}</td>
+                <td class="data-table__cell">{{ hotel.address }}</td>
+                <td class="data-table__cell">
+                    <button class="button button--primary" (click)="goToAddRoom(hotel)">+</button>
+                </td>
+                <td class="data-table__cell">
+                    <button class="button button--primary" (click)="openEditModal(hotel)">Edit</button>
+                </td>
+                <td class="data-table__cell">
+                    <button class="button button--danger" (click)="deleteHotel(hotel)">Delete</button>
+                </td>
+            </tr>
+            }
+            @if (hotels().length === 0) {
+            <tr class="data-table__row">
+                <td class="data-table__cell" colspan="5">No hotels found.</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@if (showModal()) {
+<div class="modal" (click)="closeModal()">
+    <div class="modal__box" (click)="$event.stopPropagation()">
+        <h3 class="modal__title">{{ isEditing() ? 'Edit Hotel' : 'Add Hotel' }}</h3>
+        <div class="form-group">
+            <label class="form-group__label">Name:</label>
+            <input class="form-group__input" type="text" [ngModel]="modalName()" (ngModelChange)="modalName.set($event)"
+                placeholder="Hotel Name" />
+        </div>
+        <div class="form-group">
+            <label class="form-group__label">Address:</label>
+            <input class="form-group__input" type="text" [ngModel]="modalAddress()"
+                (ngModelChange)="modalAddress.set($event)" placeholder="Address" />
+        </div>
+        <div class="modal__actions">
+            <button class="button button--primary" (click)="saveHotel()">Save</button>
+            <button class="button button--secondary" (click)="closeModal()">Cancel</button>
+        </div>
+    </div>
+</div>
+}

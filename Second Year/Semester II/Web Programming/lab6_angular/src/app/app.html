@@ -1,0 +1,28 @@
+<nav class="nav-bar">
+  <a class="nav-bar__brand" routerLink="/dashboard">✦ Hotel Booking</a>
+
+  @if (isLoggedIn()) {
+  <button class="nav-bar__toggle" (click)="toggleMenu()" [class.nav-bar__toggle--open]="menuOpen()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <div class="nav-bar__collapse" [class.nav-bar__collapse--open]="menuOpen()">
+    <div class="nav-bar__links">
+      <a class="nav-bar__link" routerLink="/hotels" routerLinkActive="nav-bar__link--active"
+        (click)="closeMenu()">Hotels</a>
+      <a class="nav-bar__link" routerLink="/rooms" routerLinkActive="nav-bar__link--active"
+        (click)="closeMenu()">Rooms</a>
+      <a class="nav-bar__link" routerLink="/reservations" routerLinkActive="nav-bar__link--active"
+        (click)="closeMenu()">My Reservations</a>
+    </div>
+    <div class="nav-bar__user">
+      <span class="nav-bar__username">{{ username() }}</span>
+      <a class="nav-bar__logout" routerLink="/login" (click)="logout(); closeMenu()">Log out</a>
+    </div>
+  </div>
+  }
+</nav>
+
+<router-outlet />

@@ -1,0 +1,12 @@
+{
+    "/lab5_php": {
+        "target": "http://localhost",
+        "secure": false,
+        "changeOrigin": true
+    },
+    "/lab8_aspnet": {
+        "target": "http://localhost:5042",
+        "secure": false,
+        "changeOrigin": true
+    }
+}
